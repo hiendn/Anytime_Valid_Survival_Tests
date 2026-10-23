@@ -59,12 +59,12 @@
       "bytes": 10605
     },
     "main.tex": {
-      "sha256": "0a0a3eb77650be1c4c3994e655ee631e02c3024d47716b61da94f25e80ac2ed1",
-      "bytes": 192498
+      "sha256": "dc5d414e9526596d5ed21303cada5f0c8b773f3ec9bbfb5403d2252068fe2b64",
+      "bytes": 194179
     },
     "manuscript.pdf": {
-      "sha256": "75fd9adbb44584566148ce98b7127981ee63cf8becabcd52e3bcfe7d1a630bc5",
-      "bytes": 587414
+      "sha256": "f0c94454c557aca9006b796b6d5e521318c617f5c6fa84f87b64b1423cc89707",
+      "bytes": 588985
     },
     "reference/liming_revision/data/application_fixed_margin_updates.csv": {
       "sha256": "934655b9592a3692c3f1d9a7aaed63828c65296c92c4ac86f570ee4333b9d8f7",

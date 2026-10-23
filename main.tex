@@ -252,7 +252,7 @@ The weight changes the relative emphasis over follow-up. Table~\ref{tab:weight-g
  \widehat S_{k_j,j}=\widehat S_{k_j,j-1}\left(1-\frac{M_j}{N_j}\right),
  \label{eq:pooled-product-limit}
 \end{equation}
-leaving the other strata unchanged. This is the Kaplan--Meier update for exact failures and its grouped analogue for common assessment windows. Comparisons released together use the estimates available before that release; subsequent pooling must be prespecified. Other estimators are admissible if the resulting weights are finite and $\mathfrak G_j$-measurable. The lower bound $s_{\min}>0$ prevents an unbounded inverse weight when estimated survival is small.
+leaving the other strata unchanged. This is the Kaplan--Meier update for exact failures and its grouped analogue for common assessment windows. Comparisons released together use the estimates available before that release; subsequent pooling must be prespecified. Section~\ref{sec:application-plan} gives the pooling rule used in the clinical examples. Other estimators are admissible if the resulting weights are finite and $\mathfrak G_j$-measurable. The lower bound $s_{\min}>0$ prevents an unbounded inverse weight when estimated survival is small.
 
 \begin{table}[tbp]
 \centering
@@ -271,7 +271,7 @@ Gray--Tsiatis (GT) & $1/\max(\widehat S_{j-1},s_{\min})$ & Greater relative emph
 \bottomrule
 \end{tabularx}
 \end{table}
-Fleming--Harrington parameters satisfy $\rho,\gamma\geq0$, with $0^0=1$. With the same preceding survival estimate in \eqref{eq:pooled-product-limit}, PP is this family at $(\rho,\gamma)=(1,0)$; the simulation column FH uses $(0,1)$. The logrank and Gray--Tsiatis motivations are examined in Section~\ref{sec:theory}, including the difference between right-endpoint and preceding-survival weights for finite intervals.
+Fleming--Harrington parameters satisfy $\rho,\gamma\geq0$, with $0^0=1$. With the same preceding survival estimate in \eqref{eq:pooled-product-limit}, PP is this family at $(\rho,\gamma)=(1,0)$; the simulation column FH uses $(0,1)$. The GT entry is the pooled-survival rule; Appendix~\ref{sec:simulation-model} specifies the design-informed variant used in some simulations. The logrank and Gray--Tsiatis motivations are examined in Section~\ref{sec:theory}, including the difference between right-endpoint and preceding-survival weights for finite intervals.
 
 The coefficient and weight scale must be chosen together: multiplying every weight by $a>0$ and dividing $\eta$ by $a$ leaves \eqref{eq:tilted-pmf} unchanged. External estimates or independent design simulations can guide their choice. Such simulations should match the planned observation schedule, censoring and prognostic strata. Mean terminal log evidence, crossing probability by the planned end of follow-up and expected monitoring duration are different objectives. To estimate the last quantity, average first-crossing times across all datasets, assigning the full planned duration to every dataset that does not cross. The median among rejecting datasets alone does not measure expected duration.
 
@@ -377,7 +377,7 @@ where $c\in[0,1)$ is the probability of never experiencing the event and $S_{\ma
  \frac{w_j^L}{w_j^*}=\frac{S(r_j)}{S(\ell_j)}=1-p_j,
  \label{eq:gt-endpoint-ratio}
 \end{equation}
-where $p_j=1-S(r_j)/S(\ell_j)$ is the interval event probability. The implemented Gray--Tsiatis rule uses preceding estimated survival, so it approximates this relative weight when interval event probabilities are small. For coarse intervals, the ratios can vary appreciably and Theorem~\ref{thm:optimal-weight} does not establish local optimality of that rule. Estimation and truncation introduce further differences but do not affect validity when weights remain finite and $\mathfrak G_j$-measurable. If cure probabilities differ between strata, a common additive cure-rate change also retains the stratum factor $1/(1-c_k)$. Finally, proportional hazards among susceptible subjects need not imply proportional population hazards, and this weighting rationale neither fits a cure model nor identifies cured subjects.
+where $p_j=1-S(r_j)/S(\ell_j)$ is the interval event probability. The pooled-survival GT rule in Table~\ref{tab:weight-guide} uses preceding estimated survival, so it approximates this relative weight when interval event probabilities are small. For coarse intervals, the ratios can vary appreciably and Theorem~\ref{thm:optimal-weight} does not establish local optimality of that rule. Estimation and truncation introduce further differences but do not affect validity when weights remain finite and $\mathfrak G_j$-measurable. If cure probabilities differ between strata, a common additive cure-rate change also retains the stratum factor $1/(1-c_k)$. Finally, proportional hazards among susceptible subjects need not imply proportional population hazards, and this weighting rationale neither fits a cure model nor identifies cured subjects.
 
 \section{Simulation study}
 \label{sec:simulation}
@@ -397,7 +397,7 @@ Experiment & Weight and normalization & Coefficient choice and quantities held f
 \midrule
 Fixed specifications & Pooled survival before each update; scale from 1,000 S1 null datasets at $n=500$, separately by observation scheme & $\eta=\log(0.7)$, or fixed mixtures; the same scales and coefficients at every sample size and alternative \\
 Alternative-specific weights & Pooled survival before each update; scale from 1,000 null pilots for each design & 1,000 alternative pilots choose each weight's coefficient for that design \\
-Primary S1/S2 and mixed observations & LR in S1; GT based on the control survival curve supplied by the simulation design in S2 & 1,000 alternative pilots choose the coefficient for the scenario, sample size and analysis \\
+Primary S1/S2 and mixed observations & LR in S1; design-informed GT in S2, evaluated at the exact failure time or interval right endpoint & 1,000 alternative pilots choose the coefficient for the scenario, sample size and analysis \\
 Allocation, visits and effect sensitivity & LR for timing effects; design-survival GT for cure effects & Reference coefficient chosen at $n=500$, then retained across the specified design grid; effect-specific selection is a separate comparison \\
 \bottomrule
 \end{tabularx}
@@ -418,7 +418,7 @@ Table~\ref{tab:fixed-design-power} gives power at $n=500$. FH retains a substant
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.10}
-\caption{Power for fixed practical designs and prequential comparators at total $n=500$.}\label{tab:fixed-design-power}
+\caption{Power for fixed specifications and prequential comparators at total $n=500$.}\label{tab:fixed-design-power}
 \begin{tabular}{ccrrrrrrrrr}
 \toprule
 Scenario & Obs. & LR & GB & PP & FH & GT & Cmix & Wmix & PQ & PQ$^{-}$ \\
@@ -463,9 +463,9 @@ The power difference is large at small sample sizes. With interval observations 
 
 The OBF null rejection estimates are mostly 0.033--0.042. Its boundary was not calibrated to spend 0.05 over the finite Gaussian information schedule, so comparisons here concern this conservative boundary, not an optimized group-sequential design. In interval-observed S1 at $n=500$, the e-process has median stopping time 2.00 years among rejections, compared with 3.00 for OBF, but its mean capped time is slightly longer, 3.81 versus 3.74 years. Nonrejecting datasets contribute the full planned duration to this mean. Earlier rejection in selected datasets need not reduce expected follow-up. Fixed has known analysis time 8 years in S1 and 10 years in S2 (Table~\ref{tab:primary-performance}).
 
-The null curves also distinguish monitoring schemes. Exact observation provides more event-time updates as the sample size increases; grouped observation retains the fixed annual assessment grid and increases the counts within each update. The grouped null crossing estimates remain well below 0.05 and are not monotone in sample size, whereas the exact estimates approach 0.05 in these designs. Coefficients are also selected separately by sample size. The plots therefore reflect changes in update granularity and specification, not a failure of the conditional martingale argument or a theorem about monotone convergence to the nominal level. Across primary designs the estimated e-process null rejection ranges from 0.003 to 0.054, compared with 0.125--0.509 for Repeated; Monte Carlo variation must be considered when interpreting estimates near 0.05.
+The null curves also distinguish monitoring schemes. Exact observation provides more event-time updates as the sample size increases; grouped observation retains the fixed annual assessment grid and increases the counts within each update. The grouped null crossing estimates remain well below 0.05 and are not monotone in sample size, whereas the exact estimates approach 0.05 in these designs. Coefficients are also selected separately by sample size. The plots therefore reflect changes in the number and sizes of updates and in the selected coefficients, not a failure of the conditional martingale argument or a theorem about monotone convergence to the nominal level. Across primary designs the estimated e-process null rejection ranges from 0.003 to 0.054, compared with 0.125--0.509 for Repeated; Monte Carlo variation must be considered when interpreting estimates near 0.05.
 
-\subsection{Assessment schedules and comparison-set quality}
+\subsection{Assessment spacing, allocation, censoring and strata}
 
 The assessment-frequency experiment holds follow-up at 8 years and the event-time model fixed while varying visit spacing over 0.5, 1 and 2 years. It uses susceptible control hazard 0.21, treatment hazard ratio 0.70, cure probability 0.15 in both groups and independent exponential censoring at rate 0.085. The annual-design coefficient selected at $n=500$ is retained at all sample sizes and spacings. Only completed intervals contribute. Thus changing visit spacing changes both when evidence can arrive and how much follow-up remains unassessed before censoring.
 
@@ -485,7 +485,9 @@ The allocation and censoring grid keeps the coefficient fixed while changing sam
 
 In S1 and S2, each subject is independently assigned to exact observation with probability $r_{\mathrm{exact}}\in\{0,0.25,0.5,0.75,1\}$, independently of treatment, event time and censoring. The remaining subjects are assessed annually. The unified analysis combines exact risk-set updates and completed-interval updates, formed within their respective observation subcohorts, in time order. It is compared with using only the exact subcohort, coarsening everyone to annual intervals, and an all-exact benchmark that has additional event-time information. All analyses share the latent datasets. Independent alternative pilots choose log-growth coefficients separately for each analysis and fraction; the all-interval and all-exact coefficients are shared across fractions.
 
-At $n=500$ and $r_{\mathrm{exact}}=0.5$, unified power is 0.8190 in S1 and 0.8984 in S2, compared with 0.4924 and 0.6366 when the interval-observed subcohort is discarded. Coarsening the full sample gives 0.7856 and 0.8776. The latter comparison asks a more specific question: whether preserving exact timing compensates for making comparisons within smaller observation subcohorts. At $n=100$ in S1, the unified estimate at the same fraction is 0.0744, below 0.0792 for all-interval observation. These are descriptive differences, not established paired effects without their paired uncertainty. Exact timing can add information, but smaller risk sets and grouped comparison sets can offset that benefit. Tables~\ref{tab:app-mixed-null} and~\ref{tab:app-mixed-power} retain the complete null and power results; they support examining this tradeoff in the intended study design rather than assuming a fixed ordering.
+At $n=500$ and $r_{\mathrm{exact}}=0.5$, unified power is 0.8190 in S1 and 0.8984 in S2, compared with 0.4924 and 0.6366 when the interval-observed subcohort is discarded. Coarsening the full sample gives 0.7856 and 0.8776. The latter comparison asks whether preserving exact timing compensates for making comparisons within smaller observation subcohorts. The unified-minus-all-interval power differences are 0.0334 in S1 and 0.0208 in S2, with paired Monte Carlo standard errors 0.00280 and 0.00233, respectively.
+
+At $n=100$ in S1, the unified estimate at the same fraction is 0.0744, below 0.0792 for all-interval observation, a difference of $-0.0048$ with paired Monte Carlo standard error 0.00204. These standard errors condition on the independently selected coefficients and omit variation from repeating the pilot calibration. Each contrast compares separately calibrated procedures with different comparison sets. Exact timing can add information, but smaller risk sets and grouped comparison sets can offset that benefit. Tables~\ref{tab:app-mixed-null} and~\ref{tab:app-mixed-power} retain the complete null and power results; they support examining this tradeoff in the intended study design rather than assuming a fixed ordering.
 
 \section{Exploratory clinical applications}
 \label{sec:clinical}
@@ -539,14 +541,14 @@ The reference specification uses $q=0.25$ years and equal weights on $\eta\in\{-
 
 The \texttt{psor} data contain 806 clinic observations from 305 patients \citep{Jackson2011msm,GladmanFarewell1999}. Excluding 93 patients with joint damage at their first visit and 27 with missing baseline erythrocyte sedimentation rate (ESR) leaves 185 patients. Of these, 120 have ESR $\geq15$ mm/h, group 0, and 65 have ESR $<15$ mm/h, group 1. First progression to at least one damaged joint occurs in 54 and 18 patients, respectively; 66 and 47 are censored at their final damage-free visit. The comparison adjusts for baseline high effusion, present in only 20 eligible patients, including three with ESR $<15$ mm/h.
 
-Follow-up begins at the first recorded damage-free visit. In each right-closed nominal window $((k-1)q,kq]$, the last visit is selected by time alone. Follow-up stops at the first retained positive state. Because damage states never decrease, this rule preserves every first progression. Tables group the previous and current nominal bins and high-effusion status, and updates are combined at $kq$. Actual visit times vary within the bins; attendance, loss to follow-up and treatment may depend on disease activity. Common conditional event probabilities are consequently a working assumption. The comparison is observational, with selection at cohort entry and possible residual confounding.
+Follow-up begins at the first recorded damage-free visit. In each right-closed nominal window $((k-1)q,kq]$, the last visit is selected by time alone. Follow-up stops at the first retained positive state. Because damage states never decrease, each patient with an observed progression retains one event in the same first-positive nominal bin. The selected positive assessment can be later than the original first-positive visit within that bin. Tables group the previous and current nominal bins and high-effusion status, and updates are combined at $kq$. Actual visit times vary within the bins; attendance, loss to follow-up and treatment may depend on disease activity. Common conditional event probabilities are consequently a working assumption. The comparison is observational, with selection at cohort entry and possible residual confounding.
 
 The reference width is six months, within the source study's 6--12-month assessment protocol. The equal mixture uses $\eta=\log(0.50),\log(0.67),\log(0.80)$. The direction follows a published outcome analysis of the same cohort and is outside the optional-monitoring guarantee. Only four of the eight reference tables are informative, as shown in Table~\ref{tab:psa-eight}. In particular, all seven patients in the $(6,12]$-month table progress, so these events contribute a factor of one. LR equals 3.19, 8.25, 11.22 and 11.22 at months 6, 12, 18 and 24. GT equals 23.63 by month 18. Its informative-table weights reach 2.326, with $\eta w_j\in[-1.613,-0.223]$, compared with $[-0.693,-0.223]$ for LR. Thus GT's larger contributions at months 12 and 18 use alternatives with lower group-1 event odds as well as greater late emphasis. Because the weights were compared retrospectively, the GT crossing is descriptive. No weight reaches 20 with three- or twelve-month bins.
 
 \begin{table}[H]
 \centering
 \small
-\caption{The eight six-month PsA comparison tables. Group columns report events/subjects, with $v_j$ the conditional hypergeometric variance. The last columns decompose the LR and GT mixtures into successive evidence multipliers in the saved table order. Only products over all tables ending at one time are monitored; intermediate multipliers depend on the chosen within-batch ordering.}
+\caption{The eight six-month PsA comparison tables. Group columns report events/subjects, with $v_j$ the conditional hypergeometric variance. The last columns give the LR and GT mixture multipliers $E_j^{\mathrm{mix}}/E_{j-1}^{\mathrm{mix}}$ in the displayed row order. Only products over all tables ending at one time are monitored; intermediate multipliers depend on the chosen within-batch ordering.}
 \label{tab:psa-eight}
 \begin{tabular}{lcrrrrr}
 \toprule
@@ -593,7 +595,7 @@ The clinical analyses expose a separate difficulty. Rounding or binning irregula
 The method applies when the conditional allocation model is defensible. Residual prognostic heterogeneity within strata, informative attendance and outcome-related censoring can invalidate it. A rejection with a late-emphasis weight does not identify a cured subgroup without further follow-up and assumptions about susceptible subjects' long-term survival \citep{MallerZhou1992}. Prospective use with staggered recruitment must also respect the order in which observations become available; delayed entry on a common risk-time scale is different from aligning each subject's time since entry \citep[Section~8.2]{TerSchureEtAl2024}. Extending the construction to history-dependent visits or continuous-covariate adjustment requires a justified conditional allocation law, rather than only a different weight. These observation-model questions are the principal limitation of applying the procedure beyond common completed windows.
 
 \section*{Data accessibility statement}
-Data and code supporting the analyses are available in the accompanying \href{https://github.com/hiendn/Anytime_Valid_Survival_Tests}{GitHub repository}.
+Data and code supporting the analyses are available in the accompanying \href{https://github.com/hiendn/Anytime_Valid_Survival_Tests}{GitHub repository}. The reported analyses use the scientific code and data at \href{https://github.com/hiendn/Anytime_Valid_Survival_Tests/tree/025903c484a004cd278c86738f0721d05104c790}{commit \texttt{025903c}}.
 
 \section*{AI use statement}
 OpenAI ChatGPT and Codex were used for exposition, mathematical formulation, proof checking, computational implementation, proofreading, and formatting. The authors take responsibility for all parts of this manuscript.
@@ -1251,7 +1253,7 @@ $\partial S_{\mathrm{pop},c}(r)/\partial c=1-S_{\mathrm{sus}}(r)$. Then
 \end{align*}
 \end{proof}
 
-By Proposition~\ref{prop:tilt-mean-derivative}, the derivative supplies the local coefficient $c_j$ up to the common scalar associated with the perturbation parameter. Within a fixed stratum its magnitude is therefore proportional to $1/S_{\mathrm{pop},c}(r)$. This is survival at the right endpoint, whereas the implemented Gray--Tsiatis rule uses the estimate preceding the update. On a consecutive common grid, ignoring estimation and truncation, the left-endpoint weight divided by the right-endpoint weight is $S_{\mathrm{pop},c}(r)/S_{\mathrm{pop},c}(\ell)=1-p_j$, where $p_j$ is the conditional interval event probability. The approximation is close when $p_j$ is small, but need not preserve relative weights across coarse intervals. The factor $1/(1-c)$ must also be retained when $c$ varies across strata and the perturbation is a common additive change in cure probability. The fixed-margin result does not establish local optimality of the implemented weights at arbitrary assessment widths.
+By Proposition~\ref{prop:tilt-mean-derivative}, the derivative supplies the local coefficient $c_j$ up to the common scalar associated with the perturbation parameter. Within a fixed stratum its magnitude is therefore proportional to $1/S_{\mathrm{pop},c}(r)$. This is survival at the right endpoint, whereas the pooled-survival GT rule in Table~\ref{tab:weight-guide} uses the estimate preceding the update. On a consecutive common grid, ignoring estimation and truncation, the left-endpoint weight divided by the right-endpoint weight is $S_{\mathrm{pop},c}(r)/S_{\mathrm{pop},c}(\ell)=1-p_j$, where $p_j$ is the conditional interval event probability. The approximation is close when $p_j$ is small, but need not preserve relative weights across coarse intervals. The factor $1/(1-c)$ must also be retained when $c$ varies across strata and the perturbation is a common additive change in cure probability. The fixed-margin result does not establish local optimality of these pooled-survival weights at arbitrary assessment widths.
 
 \subsection{Confidence sequences and optional continuation}
 \label{app:confidence-sequences}
@@ -1791,7 +1793,7 @@ $n$ & Scenario & \multicolumn{2}{c}{Fixed LR} & \multicolumn{2}{c}{Fay--Shaw} & 
 \renewcommand{\arraystretch}{1.10}
 \setlength{\LTcapwidth}{\textwidth}
 \begin{longtable}{rccrrrrrrrrr}
-\caption{Power for fixed practical designs and prequential comparators over the full sample-size grid.}\label{tab:app-fixed-design-power}\\
+\caption{Power for fixed specifications and prequential comparators over the full sample-size grid.}\label{tab:app-fixed-design-power}\\
 \toprule
 $n$ & Scenario & Obs. & LR & GB & PP & FH & GT & Cmix & Wmix & PQ & PQ$^{-}$ \\
 \midrule
@@ -1870,7 +1872,7 @@ $n$ & Scenario & Obs. & LR & GB & PP & FH & GT & Cmix & Wmix & PQ & PQ$^{-}$ \\
 \renewcommand{\arraystretch}{1.10}
 \setlength{\LTcapwidth}{\textwidth}
 \begin{longtable}{rccrrrrrrrrr}
-\caption{Mean capped stopping time in calendar years for fixed practical designs and prequential comparators over the full sample-size grid.}\label{tab:app-fixed-design-stop}\\
+\caption{Mean capped stopping time in calendar years for fixed specifications and prequential comparators over the full sample-size grid.}\label{tab:app-fixed-design-stop}\\
 \toprule
 $n$ & Scenario & Obs. & LR & GB & PP & FH & GT & Cmix & Wmix & PQ & PQ$^{-}$ \\
 \midrule
@@ -1985,7 +1987,16 @@ S5 & 0.23 & $(0.20,0.30)$ & 10 & 1 & 0.035 & 0.82 throughout \\
 \end{longtable}
 \endgroup
 
-LR, GB, PP, FH and GT denote logrank, Gehan--Breslow, Peto--Peto, Fleming--Harrington $(0,1)$ and Gray--Tsiatis weights. LR--GT is the equal arithmetic average of the LR and GT e-processes. The primary S1 comparison uses LR and S2 uses GT. Primary GT weights use the control survival curve fixed by the simulation design, whereas the broader weight experiment uses pooled survival available before each update, truncated below at $s_{\min}=0.12$.
+LR, GB, PP, FH and GT denote logrank, Gehan--Breslow, Peto--Peto, Fleming--Harrington $(0,1)$ and Gray--Tsiatis weights. LR--GT is the equal arithmetic average of the LR and GT e-processes. The primary S1 comparison uses LR and S2 uses design-informed GT. This GT specification also applies to mixed-observation S2 and the cure-family effect-sensitivity study. Its supplied control survival curve is $S_{0,\mathrm{design}}(t)=c_0+(1-c_0)\exp(-\lambda_0t)$, and its weight is
+\[
+ w_j^{\mathrm{design}}=
+ \begin{cases}
+  1/\max\{S_{0,\mathrm{design}}(t_j),0.10\}, & \text{exact failure},\\
+  1/\max\{S_{0,\mathrm{design}}(r_j),0.10\}, & \text{completed interval},
+ \end{cases}
+\]
+where $t_j$ is the exact failure time and $r_j$ is the completed interval's right endpoint. The floor 0.10 is inactive in primary S2 and its mixed-observation comparisons because $c_0=0.15$. In contrast, the pooled-survival GT rule in Table~\ref{tab:weight-guide} uses the estimate preceding the update. The fixed-specification and alternative-specific weight comparisons use that rule with $s_{\min}=0.12$ and their stated normalization.
+
 For each primary scenario, sample size and observation scheme, 1,000 independent null pilot datasets determine the planned information schedule. A separate set of 1,000 alternative pilot datasets selects $\eta$ by maximizing mean terminal log e-value over 50 equally spaced values from $-1.25$ to $-0.015$. The selected coefficients range from $-0.418$ to $-0.217$ and remain fixed during independent evaluation. Coefficients and full calibration curves are included with the reproducibility files.
 
 \subsubsection{Procedures, information schedules and performance measures}
@@ -2236,7 +2247,7 @@ The $n=500$ subset below accompanies the main-text power comparison; the complet
 \small
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.10}
-\caption{Mean capped stopping time in calendar years for fixed practical designs and prequential comparators at total $n=500$.}\label{tab:fixed-design-stop}
+\caption{Mean capped stopping time in calendar years for fixed specifications and prequential comparators at total $n=500$.}\label{tab:fixed-design-stop}
 \begin{tabular}{ccrrrrrr}
 \toprule
 Scenario & Obs. & LR & FH & Cmix & Wmix & PQ & PQ$^{-}$ \\
