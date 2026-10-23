@@ -4,19 +4,22 @@ Code, data and numerical results for the paper by Hien Duy Nguyen and Liming Xia
 
 ## Manuscript version
 
-The exact 62-page revised manuscript and its LaTeX source are archived at
-[`manuscript-round7-2026-10-23`](https://github.com/hiendn/Anytime_Valid_Survival_Tests/tree/manuscript-round7-2026-10-23).
+The 63-page round-8 manuscript PDF and its matching LaTeX source are archived at
+[`manuscript-round8-2026-10-23`](https://github.com/hiendn/Anytime_Valid_Survival_Tests/tree/manuscript-round8-2026-10-23).
+This PDF is byte-identical to the round-8 PDF supplied for review.
 The scientific analysis code, data and saved numerical results remain those at
 [`025903c484a004cd278c86738f0721d05104c790`](https://github.com/hiendn/Anytime_Valid_Survival_Tests/tree/025903c484a004cd278c86738f0721d05104c790).
-The manuscript archive is a later version: it adds the independent-stream
-sufficient result, clarifies complete-specification and pilot-conditional
-comparisons, updates literature and changes the monitoring figure's labeling.
+This manuscript version updates the literature comparisons and archive statement,
+clarifies the abstract's power comparisons, defines a complete specification and
+adds a key to the mixture and prequential procedures. The previous
+[`round-7 archive`](https://github.com/hiendn/Anytime_Valid_Survival_Tests/tree/manuscript-round7-2026-10-23)
+remains unchanged.
 No simulation results or patient records were changed or regenerated.
 
 | Archived manuscript file | SHA-256 |
 | --- | --- |
-| `main.tex` | `6110c5a1c9a3c2b8bd2590148e98477367c901b9d721a1d5e59d20660cefc840` |
-| `manuscript.pdf` | `d521bc2fca7fe55a813ae8d2272b9fa2794c8d9b9e7124722d6b64f6490bce53` |
+| `main.tex` | `f34b5e6a8ee46730a1b09bab29304cbe1bcd18c4eb36c7d50e1a00e6376371c9` |
+| `manuscript.pdf` | `0282792433da475c75fd8819319115e10e202f63a45909ac9b785151029774d8` |
 
 `MANIFEST.json` records this manuscript version and the source/PDF target hashes.
 `Verify_Results.py` checks those hashes before checking tables and saved results;

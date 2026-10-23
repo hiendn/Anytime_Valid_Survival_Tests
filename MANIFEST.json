@@ -3,10 +3,10 @@
   "data_source": "public msm 1.8.2 example objects",
   "analysis_commit": "025903c484a004cd278c86738f0721d05104c790",
   "manuscript_version": {
-    "tag": "manuscript-round7-2026-10-23",
-    "source_sha256": "6110c5a1c9a3c2b8bd2590148e98477367c901b9d721a1d5e59d20660cefc840",
-    "pdf_sha256": "d521bc2fca7fe55a813ae8d2272b9fa2794c8d9b9e7124722d6b64f6490bce53",
-    "pdf_pages": 62,
+    "tag": "manuscript-round8-2026-10-23",
+    "source_sha256": "f34b5e6a8ee46730a1b09bab29304cbe1bcd18c4eb36c7d50e1a00e6376371c9",
+    "pdf_sha256": "0282792433da475c75fd8819319115e10e202f63a45909ac9b785151029774d8",
+    "pdf_pages": 63,
     "verification_scope": "Saved-margin clinical replay and current manuscript table/hash checks; no simulation or patient preprocessing rerun."
   },
   "files": {
@@ -23,15 +23,15 @@
       "bytes": 653
     },
     "README.md": {
-      "sha256": "bba5bbf57b3bc6a20b9016a03fbb866bc3bf5bf02dadc466a57f1554668fc256",
-      "bytes": 5850
+      "sha256": "d47f95e4aa9236c6f9870aa9aed0c894a5ddc53c7452692502891d06b108444c",
+      "bytes": 6057
     },
     "Reproduce_Figures.R": {
       "sha256": "eb576e1e16c1d3d04885af33a1830b933f1dfff7cf50d73a70148053d46680ec",
       "bytes": 360
     },
     "VERIFICATION.json": {
-      "sha256": "4dc373b81930e34aa34e6695f02f13320bbd25cd01b244b0d81ea1233e2762f9",
+      "sha256": "549f999bfb8e15bf4873b437133a68d341c4e0139bd406a1a6138fb7051d3a90",
       "bytes": 785
     },
     "Verify_Results.py": {
@@ -71,12 +71,12 @@
       "bytes": 10683
     },
     "main.tex": {
-      "sha256": "6110c5a1c9a3c2b8bd2590148e98477367c901b9d721a1d5e59d20660cefc840",
-      "bytes": 214340
+      "sha256": "f34b5e6a8ee46730a1b09bab29304cbe1bcd18c4eb36c7d50e1a00e6376371c9",
+      "bytes": 217096
     },
     "manuscript.pdf": {
-      "sha256": "d521bc2fca7fe55a813ae8d2272b9fa2794c8d9b9e7124722d6b64f6490bce53",
-      "bytes": 639399
+      "sha256": "0282792433da475c75fd8819319115e10e202f63a45909ac9b785151029774d8",
+      "bytes": 643929
     },
     "reference/liming_revision/data/application_fixed_margin_updates.csv": {
       "sha256": "934655b9592a3692c3f1d9a7aaed63828c65296c92c4ac86f570ee4333b9d8f7",

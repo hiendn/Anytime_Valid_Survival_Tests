@@ -1,8 +1,8 @@
 {
   "passed": true,
-  "source_sha256": "6110c5a1c9a3c2b8bd2590148e98477367c901b9d721a1d5e59d20660cefc840",
-  "pdf_sha256": "d521bc2fca7fe55a813ae8d2272b9fa2794c8d9b9e7124722d6b64f6490bce53",
-  "manuscript_version": "manuscript-round7-2026-10-23",
+  "source_sha256": "f34b5e6a8ee46730a1b09bab29304cbe1bcd18c4eb36c7d50e1a00e6376371c9",
+  "pdf_sha256": "0282792433da475c75fd8819319115e10e202f63a45909ac9b785151029774d8",
+  "manuscript_version": "manuscript-round8-2026-10-23",
   "analysis_commit": "025903c484a004cd278c86738f0721d05104c790",
   "clinical_paths_independently_replayed": 1140,
   "maximum_absolute_log_error_against_archived": 2.3359092438113294e-13,
