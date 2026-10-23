@@ -21,6 +21,13 @@ def lse(values):
 def lc(n, k):
     return math.lgamma(n+1)-math.lgamma(k+1)-math.lgamma(n-k+1)
 
+manifest = json.loads((ROOT / 'MANIFEST.json').read_text())
+source_hash = hashlib.sha256((ROOT / 'main.tex').read_bytes()).hexdigest()
+pdf_hash = hashlib.sha256((ROOT / 'manuscript.pdf').read_bytes()).hexdigest()
+assert source_hash == manifest['files']['main.tex']['sha256'], 'Source differs from the recorded manuscript target'
+assert pdf_hash == manifest['files']['manuscript.pdf']['sha256'], 'PDF differs from the recorded manuscript target'
+assert source_hash == manifest['manuscript_version']['source_sha256']
+assert pdf_hash == manifest['manuscript_version']['pdf_sha256']
 source = (ROOT / 'main.tex').read_text()
 cells = read(ROOT / 'reference/liming_revision/data/application_fixed_margin_updates.csv')
 archived = read(ROOT / 'simulations/results/application_weight_eprocess_paths.csv')
@@ -111,7 +118,10 @@ assert len(null) == 450 and max(float(r['rejection_probability']) for r in null)
 
 result = {
     'passed': True,
-    'source_sha256': hashlib.sha256((ROOT/'main.tex').read_bytes()).hexdigest(),
+    'source_sha256': source_hash,
+    'pdf_sha256': pdf_hash,
+    'manuscript_version': manifest['manuscript_version']['tag'],
+    'analysis_commit': manifest['analysis_commit'],
     'clinical_paths_independently_replayed': checked,
     'maximum_absolute_log_error_against_archived': maximum_error,
     'current_source_new_clinical_table_rows_matched': current_rows,

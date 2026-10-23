@@ -1,6 +1,14 @@
 {
   "repository": "https://github.com/hiendn/Anytime_Valid_Survival_Tests",
   "data_source": "public msm 1.8.2 example objects",
+  "analysis_commit": "025903c484a004cd278c86738f0721d05104c790",
+  "manuscript_version": {
+    "tag": "manuscript-round7-2026-10-23",
+    "source_sha256": "6110c5a1c9a3c2b8bd2590148e98477367c901b9d721a1d5e59d20660cefc840",
+    "pdf_sha256": "d521bc2fca7fe55a813ae8d2272b9fa2794c8d9b9e7124722d6b64f6490bce53",
+    "pdf_pages": 62,
+    "verification_scope": "Saved-margin clinical replay and current manuscript table/hash checks; no simulation or patient preprocessing rerun."
+  },
   "files": {
     ".gitignore": {
       "sha256": "9d6de6a522b59147a5032c8bc4e7fae694fba64b82980ec366341217ce5abb5a",
@@ -15,16 +23,20 @@
       "bytes": 653
     },
     "README.md": {
-      "sha256": "0004e3c2e752b0c1dfec254817f99aef840b73c00227210be9db8a3be4294c26",
-      "bytes": 4469
+      "sha256": "bba5bbf57b3bc6a20b9016a03fbb866bc3bf5bf02dadc466a57f1554668fc256",
+      "bytes": 5850
     },
     "Reproduce_Figures.R": {
       "sha256": "eb576e1e16c1d3d04885af33a1830b933f1dfff7cf50d73a70148053d46680ec",
       "bytes": 360
     },
+    "VERIFICATION.json": {
+      "sha256": "4dc373b81930e34aa34e6695f02f13320bbd25cd01b244b0d81ea1233e2762f9",
+      "bytes": 785
+    },
     "Verify_Results.py": {
-      "sha256": "405d967d09b4a997bf8d175b68c38e4088b18ae568d86b5043a327174e6c6cc3",
-      "bytes": 6593
+      "sha256": "68818929f9a329b52027df9e41506880a1e149a617a6de4db19e1f94cc2d288c",
+      "bytes": 7270
     },
     "data/GPL-2": {
       "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
@@ -55,16 +67,16 @@
       "bytes": 6460
     },
     "figures/referee_sim_sample_size.pdf": {
-      "sha256": "b2e28776e70575d5a06358af280c4dcbc7a8fc6c1977db5a8233be6d31cf83be",
-      "bytes": 10605
+      "sha256": "84d609434f6fa4b5f4bd2b6ba992456845253acd540bc1055b205ceb3bd0ba1b",
+      "bytes": 10683
     },
     "main.tex": {
-      "sha256": "dc5d414e9526596d5ed21303cada5f0c8b773f3ec9bbfb5403d2252068fe2b64",
-      "bytes": 194179
+      "sha256": "6110c5a1c9a3c2b8bd2590148e98477367c901b9d721a1d5e59d20660cefc840",
+      "bytes": 214340
     },
     "manuscript.pdf": {
-      "sha256": "f0c94454c557aca9006b796b6d5e521318c617f5c6fa84f87b64b1423cc89707",
-      "bytes": 588985
+      "sha256": "d521bc2fca7fe55a813ae8d2272b9fa2794c8d9b9e7124722d6b64f6490bce53",
+      "bytes": 639399
     },
     "reference/liming_revision/data/application_fixed_margin_updates.csv": {
       "sha256": "934655b9592a3692c3f1d9a7aaed63828c65296c92c4ac86f570ee4333b9d8f7",
@@ -171,8 +183,8 @@
       "bytes": 9208
     },
     "scripts/referee_sim_figures.R": {
-      "sha256": "735104bcfa4161766b67cfba19965c572ea3becdc0b0f4bd592e9732c0eab18d",
-      "bytes": 4783
+      "sha256": "d8be3818789c328ddc67d6e7441b71ddfd0972e4381945d88ca8c31634a8e360",
+      "bytes": 4907
     },
     "scripts/report_remaining_simulations.R": {
       "sha256": "e1f99940d19479ffe2b08d3dd82284c984670eff3c80f67ae8e269890c9e930b",

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "source_sha256": "6110c5a1c9a3c2b8bd2590148e98477367c901b9d721a1d5e59d20660cefc840",
+  "pdf_sha256": "d521bc2fca7fe55a813ae8d2272b9fa2794c8d9b9e7124722d6b64f6490bce53",
+  "manuscript_version": "manuscript-round7-2026-10-23",
+  "analysis_commit": "025903c484a004cd278c86738f0721d05104c790",
+  "clinical_paths_independently_replayed": 1140,
+  "maximum_absolute_log_error_against_archived": 2.3359092438113294e-13,
+  "current_source_new_clinical_table_rows_matched": 50,
+  "fixed_design_null_eprocess_comparisons": 450,
+  "maximum_fixed_design_null_crossing_probability": 0.0486,
+  "scope": "Standard-library hypergeometric replay from archived fixed margins, current clinical table rows, saved fixed-design summary; no simulation or patient preprocessing rerun."
+}

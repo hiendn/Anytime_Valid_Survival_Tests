@@ -23,7 +23,7 @@ draw_axes <- function(ylim, ylab) {
 pdf(file.path(out, "referee_sim_sample_size.pdf"), width = 7.2, height = 6.4,
     family = "Times", useDingbats = FALSE)
 layout(matrix(c(1, 2, 3, 4, 5, 5), nrow = 3, byrow = TRUE), heights = c(1, 1, 0.16))
-par(mar = c(3.1, 3.6, 2.1, 0.9), oma = c(0, 0, 0, 0),
+par(mar = c(3.1, 3.6, 2.1, 0.9), oma = c(0, 0, 1.6, 0),
     mgp = c(2.2, 0.65, 0), tcl = -0.25, cex = 0.9)
 for (s in seq_along(scenarios)) {
   draw_axes(c(0, 1.03), "Power")
@@ -60,7 +60,9 @@ par(mar = c(0, 0, 0, 0))
 plot.new()
 legend("center", c("E-process", "Fixed", "OBF (1.96)", "Interval", "Exact"),
        col = c(cols, "#333333", "#333333"), lty = c(1, 1, 1, 1, 2),
-       pch = c(NA, NA, NA, 16, 1), lwd = 2.8, horiz = TRUE, bty = "n", cex = 0.9)
+       pch = c(NA, NA, NA, 16, 1), lwd = 2.8, horiz = TRUE, bty = "n", cex = 0.83)
+mtext("OBF(1.96): illustrative conservative reference", side = 3, outer = TRUE,
+      line = 0.35, cex = 0.85, font = 2)
 dev.off()
 
 pdf(file.path(out, "referee_sim_assessment_frequency.pdf"), width = 7.2, height = 3.5,
