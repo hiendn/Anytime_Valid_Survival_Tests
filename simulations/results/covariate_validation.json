@@ -1,0 +1,225 @@
+{
+  "sample_sizes": [100, 200, 500, 1000, 2000],
+  "n_definition": "Total enrolled subjects across both treatment groups",
+  "all_within_tolerance": true,
+  "r_version": "R version 4.4.0 (2024-04-24)",
+  "rng_kind": ["L'Ecuyer-CMRG", "Inversion", "Rejection"],
+  "package_versions": {
+    "Rcpp": "1.0.12",
+    "data.table": "1.15.4",
+    "jsonlite": "1.8.8",
+    "ggplot2": "3.5.1"
+  },
+  "sample_size_runs": [
+    {
+      "max_hypergeom_e_expectation_error": 1.1823875212257917e-13,
+      "max_score_derivative_error": 2.2946291977632427e-08,
+      "all_within_tolerance": true,
+      "r_version": "R version 4.4.0 (2024-04-24)",
+      "platform": "aarch64-apple-darwin20",
+      "os": "Darwin 25.6.0 arm64",
+      "rng_kind": {
+        "kind": "L'Ecuyer-CMRG",
+        "normal_kind": "Inversion",
+        "sample_kind": "Rejection",
+        "stream_strategy": "L'Ecuyer-CMRG stream reset for every named design-cell seed offset; the complete seed map is recorded below."
+      },
+      "package_versions": {
+        "Rcpp": "1.0.12",
+        "data.table": "1.15.4",
+        "jsonlite": "1.8.8",
+        "ggplot2": "3.5.1"
+      },
+      "seed": 20360826,
+      "derived_seeds": {
+        "algebra_validation": 20420826,
+        "covariate_alternative_evaluation": 20368126,
+        "covariate_alternative_pilot": 20367827,
+        "covariate_null_evaluation": 20368026,
+        "covariate_null_pilot": 20367826
+      },
+      "elapsed_seconds": 2.052999999999999,
+      "settings": {
+        "seed": 20360826,
+        "pilot_null": 1000,
+        "pilot_alt": 1000,
+        "eval_reps": 5000,
+        "eta_grid": 50,
+        "obf_constant": 1.96,
+        "obf_calibration": "Fixed manuscript constant; no Brownian calibration",
+        "smoke": false,
+        "figures": false
+      },
+      "session_info": ["R version 4.4.0 (2024-04-24)", "Platform: aarch64-apple-darwin20", "Running under: macOS 26.7", "", "Matrix products: default", "BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib ", "LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0", "", "Random number generation:", " RNG:     L'Ecuyer-CMRG ", " Normal:  Inversion ", " Sample:  Rejection ", " ", "locale:", "[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8", "", "time zone: Australia/Melbourne", "tzcode source: internal", "", "attached base packages:", "[1] stats     graphics  grDevices utils     datasets  methods   base     ", "", "loaded via a namespace (and not attached):", " [1] utf8_1.2.4        R6_2.5.1          tidyselect_1.2.1  magrittr_2.0.3   ", " [5] gtable_0.3.5      glue_1.7.0        tibble_3.2.1      pkgconfig_2.0.3  ", " [9] generics_0.1.3    dplyr_1.1.4       lifecycle_1.0.4   ggplot2_3.5.1    ", "[13] cli_3.6.4         fansi_1.0.6       scales_1.3.0      grid_4.4.0       ", "[17] vctrs_0.6.5       data.table_1.15.4 compiler_4.4.0    tools_4.4.0      ", "[21] pillar_1.9.0      munsell_0.5.1     Rcpp_1.0.12       colorspace_2.1-0 ", "[25] rlang_1.1.6       jsonlite_1.8.8   "],
+      "n": 100
+    },
+    {
+      "max_hypergeom_e_expectation_error": 1.20570220474292e-13,
+      "max_score_derivative_error": 2.221548101033477e-08,
+      "all_within_tolerance": true,
+      "r_version": "R version 4.4.0 (2024-04-24)",
+      "platform": "aarch64-apple-darwin20",
+      "os": "Darwin 25.6.0 arm64",
+      "rng_kind": {
+        "kind": "L'Ecuyer-CMRG",
+        "normal_kind": "Inversion",
+        "sample_kind": "Rejection",
+        "stream_strategy": "L'Ecuyer-CMRG stream reset for every named design-cell seed offset; the complete seed map is recorded below."
+      },
+      "package_versions": {
+        "Rcpp": "1.0.12",
+        "data.table": "1.15.4",
+        "jsonlite": "1.8.8",
+        "ggplot2": "3.5.1"
+      },
+      "seed": 20460826,
+      "derived_seeds": {
+        "algebra_validation": 20520826,
+        "covariate_alternative_evaluation": 20468126,
+        "covariate_alternative_pilot": 20467827,
+        "covariate_null_evaluation": 20468026,
+        "covariate_null_pilot": 20467826
+      },
+      "elapsed_seconds": 3.3260000000000005,
+      "settings": {
+        "seed": 20460826,
+        "pilot_null": 1000,
+        "pilot_alt": 1000,
+        "eval_reps": 5000,
+        "eta_grid": 50,
+        "obf_constant": 1.96,
+        "obf_calibration": "Fixed manuscript constant; no Brownian calibration",
+        "smoke": false,
+        "figures": false
+      },
+      "session_info": ["R version 4.4.0 (2024-04-24)", "Platform: aarch64-apple-darwin20", "Running under: macOS 26.7", "", "Matrix products: default", "BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib ", "LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0", "", "Random number generation:", " RNG:     L'Ecuyer-CMRG ", " Normal:  Inversion ", " Sample:  Rejection ", " ", "locale:", "[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8", "", "time zone: Australia/Melbourne", "tzcode source: internal", "", "attached base packages:", "[1] stats     graphics  grDevices utils     datasets  methods   base     ", "", "loaded via a namespace (and not attached):", " [1] utf8_1.2.4        R6_2.5.1          tidyselect_1.2.1  magrittr_2.0.3   ", " [5] gtable_0.3.5      glue_1.7.0        tibble_3.2.1      pkgconfig_2.0.3  ", " [9] generics_0.1.3    dplyr_1.1.4       lifecycle_1.0.4   ggplot2_3.5.1    ", "[13] cli_3.6.4         fansi_1.0.6       scales_1.3.0      grid_4.4.0       ", "[17] vctrs_0.6.5       data.table_1.15.4 compiler_4.4.0    tools_4.4.0      ", "[21] pillar_1.9.0      munsell_0.5.1     Rcpp_1.0.12       colorspace_2.1-0 ", "[25] rlang_1.1.6       jsonlite_1.8.8   "],
+      "n": 200
+    },
+    {
+      "max_hypergeom_e_expectation_error": 9.1926466438962962e-14,
+      "max_score_derivative_error": 2.1368490088491399e-08,
+      "all_within_tolerance": true,
+      "r_version": "R version 4.4.0 (2024-04-24)",
+      "platform": "aarch64-apple-darwin20",
+      "os": "Darwin 25.6.0 arm64",
+      "rng_kind": {
+        "kind": "L'Ecuyer-CMRG",
+        "normal_kind": "Inversion",
+        "sample_kind": "Rejection",
+        "stream_strategy": "L'Ecuyer-CMRG stream reset for every named design-cell seed offset; the complete seed map is recorded below."
+      },
+      "package_versions": {
+        "Rcpp": "1.0.12",
+        "data.table": "1.15.4",
+        "jsonlite": "1.8.8",
+        "ggplot2": "3.5.1"
+      },
+      "seed": 20560826,
+      "derived_seeds": {
+        "algebra_validation": 20620826,
+        "covariate_alternative_evaluation": 20568126,
+        "covariate_alternative_pilot": 20567827,
+        "covariate_null_evaluation": 20568026,
+        "covariate_null_pilot": 20567826
+      },
+      "elapsed_seconds": 7.543000000000001,
+      "settings": {
+        "seed": 20560826,
+        "pilot_null": 1000,
+        "pilot_alt": 1000,
+        "eval_reps": 5000,
+        "eta_grid": 50,
+        "obf_constant": 1.96,
+        "obf_calibration": "Fixed manuscript constant; no Brownian calibration",
+        "smoke": false,
+        "figures": false
+      },
+      "session_info": ["R version 4.4.0 (2024-04-24)", "Platform: aarch64-apple-darwin20", "Running under: macOS 26.7", "", "Matrix products: default", "BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib ", "LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0", "", "Random number generation:", " RNG:     L'Ecuyer-CMRG ", " Normal:  Inversion ", " Sample:  Rejection ", " ", "locale:", "[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8", "", "time zone: Australia/Melbourne", "tzcode source: internal", "", "attached base packages:", "[1] stats     graphics  grDevices utils     datasets  methods   base     ", "", "loaded via a namespace (and not attached):", " [1] utf8_1.2.4        R6_2.5.1          tidyselect_1.2.1  magrittr_2.0.3   ", " [5] gtable_0.3.5      glue_1.7.0        tibble_3.2.1      pkgconfig_2.0.3  ", " [9] generics_0.1.3    dplyr_1.1.4       lifecycle_1.0.4   ggplot2_3.5.1    ", "[13] cli_3.6.4         fansi_1.0.6       scales_1.3.0      grid_4.4.0       ", "[17] vctrs_0.6.5       data.table_1.15.4 compiler_4.4.0    tools_4.4.0      ", "[21] pillar_1.9.0      munsell_0.5.1     Rcpp_1.0.12       colorspace_2.1-0 ", "[25] rlang_1.1.6       jsonlite_1.8.8   "],
+      "n": 500
+    },
+    {
+      "max_hypergeom_e_expectation_error": 1.0447198661722723e-13,
+      "max_score_derivative_error": 3.1505489772598594e-08,
+      "all_within_tolerance": true,
+      "r_version": "R version 4.4.0 (2024-04-24)",
+      "platform": "aarch64-apple-darwin20",
+      "os": "Darwin 25.6.0 arm64",
+      "rng_kind": {
+        "kind": "L'Ecuyer-CMRG",
+        "normal_kind": "Inversion",
+        "sample_kind": "Rejection",
+        "stream_strategy": "L'Ecuyer-CMRG stream reset for every named design-cell seed offset; the complete seed map is recorded below."
+      },
+      "package_versions": {
+        "Rcpp": "1.0.12",
+        "data.table": "1.15.4",
+        "jsonlite": "1.8.8",
+        "ggplot2": "3.5.1"
+      },
+      "seed": 20660826,
+      "derived_seeds": {
+        "algebra_validation": 20720826,
+        "covariate_alternative_evaluation": 20668126,
+        "covariate_alternative_pilot": 20667827,
+        "covariate_null_evaluation": 20668026,
+        "covariate_null_pilot": 20667826
+      },
+      "elapsed_seconds": 13.876999999999995,
+      "settings": {
+        "seed": 20660826,
+        "pilot_null": 1000,
+        "pilot_alt": 1000,
+        "eval_reps": 5000,
+        "eta_grid": 50,
+        "obf_constant": 1.96,
+        "obf_calibration": "Fixed manuscript constant; no Brownian calibration",
+        "smoke": false,
+        "figures": false
+      },
+      "session_info": ["R version 4.4.0 (2024-04-24)", "Platform: aarch64-apple-darwin20", "Running under: macOS 26.7", "", "Matrix products: default", "BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib ", "LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0", "", "Random number generation:", " RNG:     L'Ecuyer-CMRG ", " Normal:  Inversion ", " Sample:  Rejection ", " ", "locale:", "[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8", "", "time zone: Australia/Melbourne", "tzcode source: internal", "", "attached base packages:", "[1] stats     graphics  grDevices utils     datasets  methods   base     ", "", "loaded via a namespace (and not attached):", " [1] utf8_1.2.4        R6_2.5.1          tidyselect_1.2.1  magrittr_2.0.3   ", " [5] gtable_0.3.5      glue_1.7.0        tibble_3.2.1      pkgconfig_2.0.3  ", " [9] generics_0.1.3    dplyr_1.1.4       lifecycle_1.0.4   ggplot2_3.5.1    ", "[13] cli_3.6.4         fansi_1.0.6       scales_1.3.0      grid_4.4.0       ", "[17] vctrs_0.6.5       data.table_1.15.4 compiler_4.4.0    tools_4.4.0      ", "[21] pillar_1.9.0      munsell_0.5.1     Rcpp_1.0.12       colorspace_2.1-0 ", "[25] rlang_1.1.6       jsonlite_1.8.8   "],
+      "n": 1000
+    },
+    {
+      "max_hypergeom_e_expectation_error": 9.6700425444851135e-14,
+      "max_score_derivative_error": 1.911041636049049e-08,
+      "all_within_tolerance": true,
+      "r_version": "R version 4.4.0 (2024-04-24)",
+      "platform": "aarch64-apple-darwin20",
+      "os": "Darwin 25.6.0 arm64",
+      "rng_kind": {
+        "kind": "L'Ecuyer-CMRG",
+        "normal_kind": "Inversion",
+        "sample_kind": "Rejection",
+        "stream_strategy": "L'Ecuyer-CMRG stream reset for every named design-cell seed offset; the complete seed map is recorded below."
+      },
+      "package_versions": {
+        "Rcpp": "1.0.12",
+        "data.table": "1.15.4",
+        "jsonlite": "1.8.8",
+        "ggplot2": "3.5.1"
+      },
+      "seed": 20760826,
+      "derived_seeds": {
+        "algebra_validation": 20820826,
+        "covariate_alternative_evaluation": 20768126,
+        "covariate_alternative_pilot": 20767827,
+        "covariate_null_evaluation": 20768026,
+        "covariate_null_pilot": 20767826
+      },
+      "elapsed_seconds": 26.619,
+      "settings": {
+        "seed": 20760826,
+        "pilot_null": 1000,
+        "pilot_alt": 1000,
+        "eval_reps": 5000,
+        "eta_grid": 50,
+        "obf_constant": 1.96,
+        "obf_calibration": "Fixed manuscript constant; no Brownian calibration",
+        "smoke": false,
+        "figures": false
+      },
+      "session_info": ["R version 4.4.0 (2024-04-24)", "Platform: aarch64-apple-darwin20", "Running under: macOS 26.7", "", "Matrix products: default", "BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib ", "LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0", "", "Random number generation:", " RNG:     L'Ecuyer-CMRG ", " Normal:  Inversion ", " Sample:  Rejection ", " ", "locale:", "[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8", "", "time zone: Australia/Melbourne", "tzcode source: internal", "", "attached base packages:", "[1] stats     graphics  grDevices utils     datasets  methods   base     ", "", "loaded via a namespace (and not attached):", " [1] utf8_1.2.4        R6_2.5.1          tidyselect_1.2.1  magrittr_2.0.3   ", " [5] gtable_0.3.5      glue_1.7.0        tibble_3.2.1      pkgconfig_2.0.3  ", " [9] generics_0.1.3    dplyr_1.1.4       lifecycle_1.0.4   ggplot2_3.5.1    ", "[13] cli_3.6.4         fansi_1.0.6       scales_1.3.0      grid_4.4.0       ", "[17] vctrs_0.6.5       data.table_1.15.4 compiler_4.4.0    tools_4.4.0      ", "[21] pillar_1.9.0      munsell_0.5.1     Rcpp_1.0.12       colorspace_2.1-0 ", "[25] rlang_1.1.6       jsonlite_1.8.8   "],
+      "n": 2000
+    }
+  ]
+}

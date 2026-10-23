@@ -1,0 +1,125 @@
+{
+  "analysis": "Real-data applications",
+  "deterministic": true,
+  "r_version": "R version 4.4.0 (2024-04-24)",
+  "rng_kind": [
+    "Mersenne-Twister",
+    "Inversion",
+    "Rejection"
+  ],
+  "packages": {
+    "msm": "1.8.2",
+    "data_table": "1.15.4",
+    "Rcpp": "1.0.12"
+  },
+  "sources": {
+    "cav": "msm data archive msmdata; Sharples et al. (2003)",
+    "psor": "msm data archive msmdata; Gladman and Farewell (1999)"
+  },
+  "weight_specifications": {
+    "comparison_status": "descriptive retrospective sensitivity analyses",
+    "number_of_window_weight_combinations": 36,
+    "assessment_widths": {
+      "cav_years": [
+        0.1,
+        0.25,
+        0.5
+      ],
+      "psor_months": [
+        3,
+        6,
+        12
+      ]
+    },
+    "coefficient_rule": "retain the original dataset-specific eta mixture for every weight",
+    "pooled_survival_rule": "Within each prognostic band, all cells at a release use the left-limit pooled survival; after release multiply it by 1 - sum(events)/sum(completed interval records).",
+    "gb_rule": "cell completed-interval count / eligible baseline count in its prognostic band",
+    "gt_survival_floor": 0.12,
+    "lr_gt_rule": "arithmetic average of the complete LR and GT e-processes"
+  },
+  "cav": {
+    "source_rows": 2846,
+    "source_subjects": 622,
+    "eligible_subjects": 583,
+    "excluded_other_or_missing_diagnosis": 39,
+    "completed_interval_records": 1477,
+    "first_CAV_detections": 214,
+    "outcome_counts": {
+      "CAV": 214,
+      "death_before_CAV": 130,
+      "censored": 239
+    },
+    "primary_window_q_years": 0.25,
+    "application_weight_codes": [
+      "LR",
+      "GB",
+      "PP",
+      "FH",
+      "GT",
+      "LR--GT"
+    ],
+    "pooled_release_survival_floor": 0.12,
+    "primary_strata": ["rounded interval endpoints", "sex", "baseline recipient age <45/45--54/55+", "donor age <30/30+"],
+    "mixture_eta": [
+      -0.693147180559945,
+      -0.405465108108164,
+      0.405465108108164,
+      0.693147180559945
+    ]
+  },
+  "psor": {
+    "source_rows": 806,
+    "source_subjects": 305,
+    "subjects_initially_state_one": 212,
+    "excluded_initial_damage": 93,
+    "excluded_missing_baseline_esr": 27,
+    "eligible_subjects": 185,
+    "completed_raw_intervals": 231,
+    "first_progressions": 72,
+    "primary_window_q_months": 6,
+    "application_weight_codes": [
+      "LR",
+      "GB",
+      "PP",
+      "FH",
+      "GT",
+      "LR--GT"
+    ],
+    "pooled_release_survival_floor": 0.12,
+    "primary_strata": ["previous nominal release", "current nominal release", "baseline high-effusion status"],
+    "mixture_conditional_odds_ratios": [
+      0.5,
+      0.67,
+      0.8
+    ]
+  },
+  "checks": {
+    "cav_baseline_total": true,
+    "cav_group_counts": true,
+    "cav_event_total": true,
+    "cav_events_counted_once": true,
+    "cav_primary_margin_bounds": true,
+    "cav_zero_width_rows_are_negative": true,
+    "cav_all_q_sensitivities_cross": true,
+    "psor_source_dimensions": true,
+    "psor_source_subjects": true,
+    "psor_initial_state_one": true,
+    "psor_missing_baseline_esr": true,
+    "psor_eligible_total": true,
+    "psor_group_counts": true,
+    "psor_progressions": true,
+    "psor_events_counted_once": true,
+    "psor_primary_records": true,
+    "psor_primary_margin_bounds": true,
+    "psor_all_windows_preserve_events": true,
+    "psor_all_windows_do_not_cross": true,
+    "all_e_values_finite_positive": true,
+    "all_weighted_e_values_finite_positive": true,
+    "all_weight_window_combinations_present": true,
+    "all_weight_window_paths_complete": true,
+    "weighted_lr_reproduces_original": true,
+    "arithmetic_lr_gt_mixture": true
+  },
+  "all_checks_pass": true,
+  "session_info": ["R version 4.4.0 (2024-04-24)", "Platform: aarch64-apple-darwin20", "Running under: macOS 26.7", "", "Matrix products: default", "BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib ", "LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0", "", "locale:", "[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8", "", "time zone: Australia/Melbourne", "tzcode source: internal", "", "attached base packages:", "[1] stats     graphics  grDevices utils     datasets  methods   base     ", "", "other attached packages:", "[1] jsonlite_1.8.8    data.table_1.15.4", "", "loaded via a namespace (and not attached):", " [1] utf8_1.2.4      Matrix_1.7-0    lattice_0.22-6  magrittr_2.0.3 ", " [5] splines_4.4.0   glue_1.7.0      tibble_3.2.1    pkgconfig_2.0.3", " [9] generics_0.1.3  lifecycle_1.0.4 mvtnorm_1.3-3   cli_3.6.4      ", "[13] fansi_1.0.6     vctrs_0.6.5     grid_4.4.0      compiler_4.4.0 ", "[17] tools_4.4.0     pillar_1.9.0    Rcpp_1.0.12     survival_3.5-8 ", "[21] rlang_1.1.6     expm_1.0-0      msm_1.8.2      "]
+}

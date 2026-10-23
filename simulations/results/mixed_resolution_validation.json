@@ -1,0 +1,126 @@
+{
+  "max_conditional_e_expectation_error": 2.6867397195928788e-14,
+  "max_score_derivative_error": 2.8203527291381647e-09,
+  "algebra_within_tolerance": true,
+  "latency_ph_n100_rho0_mixed_equals_panel": true,
+  "latency_ph_n100_rho1_mixed_equals_oracle": true,
+  "latency_ph_n200_rho0_mixed_equals_panel": true,
+  "latency_ph_n200_rho1_mixed_equals_oracle": true,
+  "latency_ph_n500_rho0_mixed_equals_panel": true,
+  "latency_ph_n500_rho1_mixed_equals_oracle": true,
+  "latency_ph_n1000_rho0_mixed_equals_panel": true,
+  "latency_ph_n1000_rho1_mixed_equals_oracle": true,
+  "latency_ph_n2000_rho0_mixed_equals_panel": true,
+  "latency_ph_n2000_rho1_mixed_equals_oracle": true,
+  "pure_cure_n100_rho0_mixed_equals_panel": true,
+  "pure_cure_n100_rho1_mixed_equals_oracle": true,
+  "pure_cure_n200_rho0_mixed_equals_panel": true,
+  "pure_cure_n200_rho1_mixed_equals_oracle": true,
+  "pure_cure_n500_rho0_mixed_equals_panel": true,
+  "pure_cure_n500_rho1_mixed_equals_oracle": true,
+  "pure_cure_n1000_rho0_mixed_equals_panel": true,
+  "pure_cure_n1000_rho1_mixed_equals_oracle": true,
+  "pure_cure_n2000_rho0_mixed_equals_panel": true,
+  "pure_cure_n2000_rho1_mixed_equals_oracle": true,
+  "all_endpoint_identities_hold": true,
+  "r": "R version 4.4.0 (2024-04-24)",
+  "platform": "aarch64-apple-darwin20",
+  "os": "Darwin 25.6.0 arm64",
+  "rng_kind": ["L'Ecuyer-CMRG", "Inversion", "Rejection"],
+  "packages": {
+    "Rcpp": "1.0.12",
+    "data.table": "1.15.4",
+    "jsonlite": "1.8.8"
+  },
+  "session_info": ["R version 4.4.0 (2024-04-24)", "Platform: aarch64-apple-darwin20", "Running under: macOS 26.7", "", "Matrix products: default", "BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib ", "LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0", "", "Random number generation:", " RNG:     L'Ecuyer-CMRG ", " Normal:  Inversion ", " Sample:  Rejection ", " ", "locale:", "[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8", "", "time zone: Australia/Melbourne", "tzcode source: internal", "", "attached base packages:", "[1] stats     graphics  grDevices utils     datasets  methods   base     ", "", "loaded via a namespace (and not attached):", "[1] compiler_4.4.0    tools_4.4.0       Rcpp_1.0.12       data.table_1.15.4", "[5] jsonlite_1.8.8   "],
+  "seed": 20260830,
+  "seed_schedule": {
+    "algebra_validation": 9817,
+    "scenario": {
+      "latency_ph": {
+        "100": {
+          "pilot_alternative": 20360831,
+          "evaluation_null": [20361831, 20361832, 20361833, 20361834, 20361835, 20361836, 20361837, 20361838, 20361839, 20361840, 20361841, 20361842, 20361843, 20361844, 20361845, 20361846, 20361847, 20361848, 20361849, 20361850],
+          "evaluation_alternative": [20362831, 20362832, 20362833, 20362834, 20362835, 20362836, 20362837, 20362838, 20362839, 20362840, 20362841, 20362842, 20362843, 20362844, 20362845, 20362846, 20362847, 20362848, 20362849, 20362850],
+          "endpoint_identity": 20369831
+        },
+        "200": {
+          "pilot_alternative": 20460831,
+          "evaluation_null": [20461831, 20461832, 20461833, 20461834, 20461835, 20461836, 20461837, 20461838, 20461839, 20461840, 20461841, 20461842, 20461843, 20461844, 20461845, 20461846, 20461847, 20461848, 20461849, 20461850],
+          "evaluation_alternative": [20462831, 20462832, 20462833, 20462834, 20462835, 20462836, 20462837, 20462838, 20462839, 20462840, 20462841, 20462842, 20462843, 20462844, 20462845, 20462846, 20462847, 20462848, 20462849, 20462850],
+          "endpoint_identity": 20469831
+        },
+        "500": {
+          "pilot_alternative": 20760831,
+          "evaluation_null": [20761831, 20761832, 20761833, 20761834, 20761835, 20761836, 20761837, 20761838, 20761839, 20761840, 20761841, 20761842, 20761843, 20761844, 20761845, 20761846, 20761847, 20761848, 20761849, 20761850],
+          "evaluation_alternative": [20762831, 20762832, 20762833, 20762834, 20762835, 20762836, 20762837, 20762838, 20762839, 20762840, 20762841, 20762842, 20762843, 20762844, 20762845, 20762846, 20762847, 20762848, 20762849, 20762850],
+          "endpoint_identity": 20769831
+        },
+        "1000": {
+          "pilot_alternative": 21260831,
+          "evaluation_null": [21261831, 21261832, 21261833, 21261834, 21261835, 21261836, 21261837, 21261838, 21261839, 21261840, 21261841, 21261842, 21261843, 21261844, 21261845, 21261846, 21261847, 21261848, 21261849, 21261850],
+          "evaluation_alternative": [21262831, 21262832, 21262833, 21262834, 21262835, 21262836, 21262837, 21262838, 21262839, 21262840, 21262841, 21262842, 21262843, 21262844, 21262845, 21262846, 21262847, 21262848, 21262849, 21262850],
+          "endpoint_identity": 21269831
+        },
+        "2000": {
+          "pilot_alternative": 22260831,
+          "evaluation_null": [22261831, 22261832, 22261833, 22261834, 22261835, 22261836, 22261837, 22261838, 22261839, 22261840, 22261841, 22261842, 22261843, 22261844, 22261845, 22261846, 22261847, 22261848, 22261849, 22261850],
+          "evaluation_alternative": [22262831, 22262832, 22262833, 22262834, 22262835, 22262836, 22262837, 22262838, 22262839, 22262840, 22262841, 22262842, 22262843, 22262844, 22262845, 22262846, 22262847, 22262848, 22262849, 22262850],
+          "endpoint_identity": 22269831
+        }
+      },
+      "pure_cure": {
+        "100": {
+          "pilot_alternative": 30360831,
+          "evaluation_null": [30361831, 30361832, 30361833, 30361834, 30361835, 30361836, 30361837, 30361838, 30361839, 30361840, 30361841, 30361842, 30361843, 30361844, 30361845, 30361846, 30361847, 30361848, 30361849, 30361850],
+          "evaluation_alternative": [30362831, 30362832, 30362833, 30362834, 30362835, 30362836, 30362837, 30362838, 30362839, 30362840, 30362841, 30362842, 30362843, 30362844, 30362845, 30362846, 30362847, 30362848, 30362849, 30362850],
+          "endpoint_identity": 30369831
+        },
+        "200": {
+          "pilot_alternative": 30460831,
+          "evaluation_null": [30461831, 30461832, 30461833, 30461834, 30461835, 30461836, 30461837, 30461838, 30461839, 30461840, 30461841, 30461842, 30461843, 30461844, 30461845, 30461846, 30461847, 30461848, 30461849, 30461850],
+          "evaluation_alternative": [30462831, 30462832, 30462833, 30462834, 30462835, 30462836, 30462837, 30462838, 30462839, 30462840, 30462841, 30462842, 30462843, 30462844, 30462845, 30462846, 30462847, 30462848, 30462849, 30462850],
+          "endpoint_identity": 30469831
+        },
+        "500": {
+          "pilot_alternative": 30760831,
+          "evaluation_null": [30761831, 30761832, 30761833, 30761834, 30761835, 30761836, 30761837, 30761838, 30761839, 30761840, 30761841, 30761842, 30761843, 30761844, 30761845, 30761846, 30761847, 30761848, 30761849, 30761850],
+          "evaluation_alternative": [30762831, 30762832, 30762833, 30762834, 30762835, 30762836, 30762837, 30762838, 30762839, 30762840, 30762841, 30762842, 30762843, 30762844, 30762845, 30762846, 30762847, 30762848, 30762849, 30762850],
+          "endpoint_identity": 30769831
+        },
+        "1000": {
+          "pilot_alternative": 31260831,
+          "evaluation_null": [31261831, 31261832, 31261833, 31261834, 31261835, 31261836, 31261837, 31261838, 31261839, 31261840, 31261841, 31261842, 31261843, 31261844, 31261845, 31261846, 31261847, 31261848, 31261849, 31261850],
+          "evaluation_alternative": [31262831, 31262832, 31262833, 31262834, 31262835, 31262836, 31262837, 31262838, 31262839, 31262840, 31262841, 31262842, 31262843, 31262844, 31262845, 31262846, 31262847, 31262848, 31262849, 31262850],
+          "endpoint_identity": 31269831
+        },
+        "2000": {
+          "pilot_alternative": 32260831,
+          "evaluation_null": [32261831, 32261832, 32261833, 32261834, 32261835, 32261836, 32261837, 32261838, 32261839, 32261840, 32261841, 32261842, 32261843, 32261844, 32261845, 32261846, 32261847, 32261848, 32261849, 32261850],
+          "evaluation_alternative": [32262831, 32262832, 32262833, 32262834, 32262835, 32262836, 32262837, 32262838, 32262839, 32262840, 32262841, 32262842, 32262843, 32262844, 32262845, 32262846, 32262847, 32262848, 32262849, 32262850],
+          "endpoint_identity": 32269831
+        }
+      }
+    }
+  },
+  "settings": {
+    "seed": 20260830,
+    "sample_sizes": [100, 200, 500, 1000, 2000],
+    "sample_size_definition": "total randomized subjects; independent Bernoulli(0.5) allocation",
+    "pilot_reps": 1000,
+    "eval_reps": 5000,
+    "eval_chunk_size": 250,
+    "evaluation_chunk_sizes": [250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250],
+    "fractions": "0,0.25,0.5,0.75,1",
+    "eta_min": -1.25,
+    "eta_max": -0.014999999999999999,
+    "eta_grid": 50,
+    "scenarios": "latency_ph,pure_cure",
+    "identity_reps": 200,
+    "validation_iterations": 100,
+    "production": true,
+    "smoke": false
+  },
+  "elapsed_seconds": 298.22500000000002,
+  "generated_figures": ["mixed_resolution_power.pdf", "mixed_resolution_loge.pdf", "mixed_resolution_null.pdf", "mixed_resolution_observation_mix.pdf", "mixed_resolution_example_paths.pdf"]
+}

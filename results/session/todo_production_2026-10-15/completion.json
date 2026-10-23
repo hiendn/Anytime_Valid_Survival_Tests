@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "completed_at": "2026-10-15 10:48:30 UTC",
+  "stochastic_datasets": 250000,
+  "evaluation_cells": 100,
+  "summary_rows": 1050,
+  "outcome_rows": 5250000,
+  "maximum_sim1_score_difference": 0,
+  "total_elapsed_seconds": 106.792,
+  "manuscript_modified": false
+}

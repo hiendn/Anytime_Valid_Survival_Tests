@@ -1,0 +1,112 @@
+{
+  "mode": "production",
+  "n": [100, 200, 500, 1000, 2000],
+  "scenarios": ["S1", "S2", "S3", "S4", "S5"],
+  "reps_per_truth_cell": 5000,
+  "batch_size": 250,
+  "pilot_reps": 1000,
+  "pilot_n": 500,
+  "pilot_scenario": "S1 null",
+  "pilot_seed_base": 900000,
+  "evaluation_seed_base": 71000000,
+  "alpha": 0.050000000000000003,
+  "fixed_eta": -0.35667494393873245,
+  "mixture_eta": [-0.69314718055994529, -0.35667494393873245, -0.10536051565782628],
+  "mixture_weights": ["LR", "FH", "GT"],
+  "mixture_masses": "1/9 for each weight/coefficient pair",
+  "gray_survival_floor": 0.12,
+  "scenarios_parameters": {
+    "S1": {
+      "label": "Sustained susceptible-hazard effect",
+      "K": 8,
+      "delta": 1,
+      "rate": 0.20999999999999999,
+      "c0": 0.14999999999999999,
+      "c1": 0.14999999999999999,
+      "early": 0.65000000000000002,
+      "late": 0.65000000000000002,
+      "change": "Inf",
+      "dropout": 0.14000000000000001
+    },
+    "S2": {
+      "label": "Pure cure-probability effect",
+      "K": 10,
+      "delta": 1,
+      "rate": 0.25,
+      "c0": 0.14999999999999999,
+      "c1": 0.34000000000000002,
+      "early": 1,
+      "late": 1,
+      "change": "Inf",
+      "dropout": 0.12
+    },
+    "S3": {
+      "label": "Early effect",
+      "K": 12,
+      "delta": 0.5,
+      "rate": 0.10000000000000001,
+      "c0": 0,
+      "c1": 0,
+      "early": 0.65000000000000002,
+      "late": 1,
+      "change": 5,
+      "dropout": 0.034394583742433538
+    },
+    "S4": {
+      "label": "Delayed effect",
+      "K": 16,
+      "delta": 0.5,
+      "rate": 0.089999999999999997,
+      "c0": 0,
+      "c1": 0,
+      "early": 1,
+      "late": 0.55000000000000004,
+      "change": 6,
+      "dropout": 0.029554466451491845
+    },
+    "S5": {
+      "label": "Joint latency and cure effect",
+      "K": 10,
+      "delta": 1,
+      "rate": 0.23000000000000001,
+      "c0": 0.20000000000000001,
+      "c1": 0.29999999999999999,
+      "early": 0.81999999999999995,
+      "late": 0.81999999999999995,
+      "change": "Inf",
+      "dropout": 0.035000000000000003
+    }
+  },
+  "source_sha256": {
+    "scripts/run_remaining_simulations.R": "0d134f4a5aa6990f7fac1fcecdd0baa0a1a2b4f20ae4ced0c744ab37858e4530",
+    "scripts/sim1_benchmark.R": "1c77ddcb2f49d5446329c877bdbd59f30996f3c5c7b216be63d5c84e921c1168",
+    "scripts/sim2_comparators.R": "1503c3eee57b47a0f9cd6683af383892323e29be5509749d8e68e14c3878edbc",
+    "scripts/sim2_kernels.cpp": "1cf17410945c5795365716033b35a77e32360ced02d5ae13f6498b90b7037cd4",
+    "simulations/code/simulation_core.R": "db1336974759acefa7d8f30dccf3492952c318d698e36e8601ebed66f51e2ea6",
+    "simulations/code/simulation_kernels.cpp": "4c8e7440929c2425a79c119448be6d836d5c4a869d361a8dfed925de065bd423",
+    "simulations/code/run_practical_battery.R": "9c35cf4b7ec9d1fe3817bc214b0b1148b82ad5bd42a9c10f538c027ef0d088e8",
+    "simulations/code/run_exact_interval_primary.R": "80d52272db576489e62e197d524171109f0c5c5bcb024cae6d90b768541e4d49",
+    "simulations/code/simulation_config.R": "927137824ae2a2eec7fdad931995d378a04113a69007131dab4de27a42d41328"
+  },
+  "observation_pairing": "Same latent draw and dropout records for both schemes and all procedures",
+  "prequential": "Unrestricted original smoothed MLE plus separately labeled protective restriction; grouped FNCH extension",
+  "manuscripts_modified": false,
+  "frozen_scales": {
+    "interval": [1, 0.73975403937422024, 0.78452741053615471, 0.31730855245307193, 1.5298806507450367],
+    "exact": [1, 0.68595470801661618, 0.72739527727096198, 0.35156935400547534, 1.6389428951227156]
+  },
+  "frozen_scales_rds_sha256": "8cb55ced5232091e08216220aefe8cc9d95dd171c4730d6c69f761809f66630c",
+  "exact_R_expressions": {
+    "fixed_eta": "log(0.7)",
+    "mixture_eta": "log(c(0.5, 0.7, 0.9))",
+    "S3_dropout": "1-exp(-0.07*0.5)",
+    "S4_dropout": "1-exp(-0.06*0.5)"
+  },
+  "seed_algorithm": {
+    "pilot": "900000 + batch",
+    "evaluation": "71000000 + match(n,c(100,200,500,1000,2000))*10000000 + match(scenario,paste0('S',1:5))*1000000 + match(truth,c('null','alternative'))*100000 + batch",
+    "batch_sizes": "min(batch_size, reps_per_truth_cell-(batch-1)*batch_size)",
+    "rng": "L'Ecuyer-CMRG / Inversion / Rejection"
+  },
+  "provenance_note": "The original design.json uses jsonlite's default display precision. Exact evaluation parameters came from the frozen hashed R source; frozen_scales.rds retains full binary precision. This companion records those same values with 17-digit JSON precision."
+}

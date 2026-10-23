@@ -1,0 +1,142 @@
+{
+  "primary_null_e_below_0_05": false,
+  "design_null_e_below_0_05": false,
+  "visit_null_e_below_0_05": true,
+  "primary_null_e_within_1_96_mc_se": true,
+  "design_null_e_within_1_96_mc_se": true,
+  "visit_null_e_within_1_96_mc_se": true,
+  "primary_null_diagnostics": {
+    "all_estimates_at_or_below_alpha": false,
+    "all_estimates_within_mc_tolerance": true,
+    "max_estimate": 0.054,
+    "max_standardized_excess": 1.25141842629713
+  },
+  "design_null_diagnostics": {
+    "all_estimates_at_or_below_alpha": false,
+    "all_estimates_within_mc_tolerance": true,
+    "max_estimate": 0.0516,
+    "max_standardized_excess": 0.511427835103484
+  },
+  "visit_null_diagnostics": {
+    "all_estimates_at_or_below_alpha": true,
+    "all_estimates_within_mc_tolerance": true,
+    "max_estimate": 0.0234,
+    "max_standardized_excess": 0
+  },
+  "effect_power_in_unit_interval": true,
+  "all_probabilities_in_unit_interval": true,
+  "null_checks_are_descriptive": true,
+  "null_check_interpretation": "Raw <= 0.05 flags are retained for comparability; preferred flags allow 1.96 Monte Carlo standard errors above 0.05 and are not algebraic validity assertions.",
+  "two_scheme_weight_null_below_0_05": false,
+  "two_scheme_weight_null_within_1_96_mc_se": true,
+  "two_scheme_weight_null_diagnostics": {
+    "all_estimates_at_or_below_alpha": false,
+    "all_estimates_within_mc_tolerance": true,
+    "max_estimate": 0.0524,
+    "max_standardized_excess": 0.761584461051843
+  },
+  "primary_exact_interval_common_latent": true,
+  "intentional_design_correction": "Exact and interval analyses apply both observation maps to the same latent pilot and evaluation datasets within each N/scenario/truth cell. OBF information planning and monitoring align on scheduled calendar looks.",
+  "structure": {
+    "passed": true,
+    "expected_rows": {
+      "expanded_primary": 160,
+      "expanded_primary_eta_calibration": 1000,
+      "design_sensitivity": 320,
+      "visit_frequency": 120,
+      "effect_tilt_sensitivity": 120,
+      "effect_tilt_eta_calibration": 3000,
+      "two_scheme_weight_battery": 600
+    },
+    "observed_rows": {
+      "expanded_primary": 160,
+      "expanded_primary_eta_calibration": 1000,
+      "design_sensitivity": 320,
+      "visit_frequency": 120,
+      "effect_tilt_sensitivity": 120,
+      "effect_tilt_eta_calibration": 3000,
+      "two_scheme_weight_battery": 600
+    },
+    "schema_match": {
+      "expanded_primary": true,
+      "design_sensitivity": true,
+      "visit_frequency": true,
+      "effect_tilt_sensitivity": true,
+      "two_scheme_weight_battery": true
+    },
+    "probabilities_finite": true,
+    "sample_sizes_match": true
+  },
+  "r_version": "R version 4.4.0 (2024-04-24)",
+  "platform": "aarch64-apple-darwin20; darwin20",
+  "rng_kind": {
+    "kind": "L'Ecuyer-CMRG",
+    "normal_kind": "Inversion",
+    "sample_kind": "Rejection"
+  },
+  "packages": {
+    "Rcpp": "1.0.12",
+    "data.table": "1.15.4",
+    "jsonlite": "1.8.8",
+    "matrixStats": "1.5.0"
+  },
+  "seed": 20260901,
+  "settings": {
+    "seed": 20260901,
+    "pilot": 1000,
+    "pilot_small": 1000,
+    "eval_primary": 5000,
+    "eval_grid": 5000,
+    "eval_visit": 5000,
+    "eval_effect": 5000,
+    "eval_weight": 5000,
+    "output_dir": "simulations/results",
+    "smoke_test": false
+  },
+  "baseline_eta": {
+    "ph_interval": -0.34265306122449,
+    "ph_exact": -0.317448979591837,
+    "cure_interval": -0.216632653061224,
+    "cure_exact": -0.216632653061224
+  },
+  "sample_sizes": [
+    100,
+    200,
+    500,
+    1000,
+    2000
+  ],
+  "reference_n": 500,
+  "weight_calibration_rows": 12500,
+  "paired_schemes_all_studies": true,
+  "obf_looks": "Prespecified scheduled assessment calendar times for both observation schemes; cumulative scores carried forward through event-free visits.",
+  "pilot_design": "Independent null pilot for weight scaling/information; independent alternative pilot for tilt; independent evaluation. Sensitivity baseline tilts fixed at reference N across N and effect cells.",
+  "elapsed_seconds": 1334.505,
+  "session_info": [
+    "R version 4.4.0 (2024-04-24)",
+    "Platform: aarch64-apple-darwin20",
+    "Running under: macOS 26.7",
+    "",
+    "Matrix products: default",
+    "BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib ",
+    "LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0",
+    "",
+    "Random number generation:",
+    " RNG:     L'Ecuyer-CMRG ",
+    " Normal:  Inversion ",
+    " Sample:  Rejection ",
+    " ",
+    "locale:",
+    "[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8",
+    "",
+    "time zone: Australia/Melbourne",
+    "tzcode source: internal",
+    "",
+    "attached base packages:",
+    "[1] stats     graphics  grDevices utils     datasets  methods   base     ",
+    "",
+    "loaded via a namespace (and not attached):",
+    "[1] compiler_4.4.0    tools_4.4.0       Rcpp_1.0.12       data.table_1.15.4",
+    "[5] jsonlite_1.8.8    matrixStats_1.5.0"
+  ]
+}

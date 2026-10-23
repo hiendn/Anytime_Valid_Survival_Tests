@@ -1,0 +1,140 @@
+{
+  "completed": true,
+  "production_simulations_completed": true,
+  "production_output_audit_passed": true,
+  "production_elapsed_seconds": 786.987,
+  "consolidation_exit_code": 0,
+  "final_source_smoke_exit_code": 0,
+  "initial_launcher_exit_code": 1,
+  "initial_launcher_error": "Error in args$pilot_small : object of type closure is not subsettable",
+  "initial_launcher_error_stage": "After all production CSVs and expanded_validation.json were saved",
+  "resolution": "The long-running Rscript source received nonnumerical edits while executing. The final unchanged source passed a complete smoke run with exit code zero. Consolidation was rerun successfully without recalculating any production simulations, and every production result and calibration CSV passed the complete N-grid, row-count, key, probability, Monte Carlo SE and stopping-time audit.",
+  "outputs": {
+    "expanded_primary": {
+      "rows": 160,
+      "n": [
+        100,
+        200,
+        500,
+        1000,
+        2000
+      ]
+    },
+    "expanded_primary_eta_calibration": {
+      "rows": 720,
+      "n": [
+        100,
+        200,
+        500,
+        1000,
+        2000
+      ]
+    },
+    "design_sensitivity": {
+      "rows": 320,
+      "n": [
+        100,
+        200,
+        500,
+        1000,
+        2000
+      ]
+    },
+    "visit_frequency": {
+      "rows": 120,
+      "n": [
+        100,
+        200,
+        500,
+        1000,
+        2000
+      ]
+    },
+    "effect_tilt_sensitivity": {
+      "rows": 120,
+      "n": [
+        100,
+        200,
+        500,
+        1000,
+        2000
+      ]
+    },
+    "effect_tilt_eta_calibration": {
+      "rows": 2160,
+      "n": [
+        100,
+        200,
+        500,
+        1000,
+        2000
+      ]
+    },
+    "two_scheme_weight_battery": {
+      "rows": 600,
+      "n": [
+        100,
+        200,
+        500,
+        1000,
+        2000
+      ]
+    },
+    "two_scheme_weight_eta_calibration": {
+      "rows": 9000,
+      "n": [
+        100,
+        200,
+        500,
+        1000,
+        2000
+      ]
+    },
+    "baseline_eta_calibration": {
+      "rows": 144,
+      "n": [
+        500
+      ]
+    },
+    "weight_battery": {
+      "rows": 175,
+      "n": [
+        100,
+        200,
+        500,
+        1000,
+        2000
+      ]
+    },
+    "weight_battery_null": {
+      "rows": 175,
+      "n": [
+        100,
+        200,
+        500,
+        1000,
+        2000
+      ]
+    },
+    "covariate_stratification": {
+      "rows": 80,
+      "n": [
+        100,
+        200,
+        500,
+        1000,
+        2000
+      ]
+    },
+    "paired_power_differences_full": {
+      "rows": 75,
+      "n": [
+        100,
+        200,
+        500,
+        1000,
+        2000
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "replicates_per_application_mechanism": 2000,
+  "actual_application_function_names": ["log_mean_exp", "eta_text", "mixture_path", "add_application_weights", "cav_intervals", "cav_analysis", "psor_cohort", "psor_analysis"],
+  "actual_application_source_md5": "fae5c34576ae7f641d1d1ea88500887c",
+  "data_model": "Independent exponential event times with a common rate in both groups; visits independent of event times; no loss to follow-up; one homogeneous prognostic stratum",
+  "cav": {
+    "n": 583,
+    "n0": 270,
+    "n1": 313,
+    "rate_per_year": 0.12,
+    "assessment_years": [1, 2, 3, 4, 5, 6],
+    "q": 0.25,
+    "jitter": "Independent: Uniform(-.12,.12); differential: group 0 Uniform(-.12,0), group 1 Uniform(0,.12); added to each annual visit"
+  },
+  "psa": {
+    "n": 185,
+    "n0": 120,
+    "n1": 65,
+    "rate_per_month": 0.025,
+    "windows": 4,
+    "q": 6,
+    "visits_per_window": 2,
+    "jitter": "Within each six-month window, common grid offsets 5 and 6; independent offsets Uniform(.2,5.8); differential offsets group 0 Uniform(3.2,5.8), group 1 Uniform(.2,2.8); last visit retained by actual function"
+  },
+  "probability_diagnostic": "1-exp(-lambda*(actual_right-actual_left)); maximum minus minimum among intervals assigned to each comparison; summarize over replications",
+  "paired_design": "Event-time draws and underlying uniform visit draws are reused across mechanisms within each application/replicate",
+  "statistical_scope": "A mechanism stress test under equal latent event hazards, not a validation of either clinical cohort or its observation assumptions",
+  "no_archived_results_modified": true,
+  "elapsed_seconds": 220.023,
+  "session_info": ["R version 4.4.0 (2024-04-24)", "Platform: aarch64-apple-darwin20", "Running under: macOS 26.7.1", "", "Matrix products: default", "BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib ", "LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0", "", "locale:", "[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8", "", "time zone: Australia/Melbourne", "tzcode source: internal", "", "attached base packages:", "[1] stats     graphics  grDevices utils     datasets  methods   base     ", "", "other attached packages:", "[1] jsonlite_1.8.8    data.table_1.15.4", "", "loaded via a namespace (and not attached):", "[1] compiler_4.4.0 parallel_4.4.0 tools_4.4.0    Rcpp_1.0.12   "]
+}

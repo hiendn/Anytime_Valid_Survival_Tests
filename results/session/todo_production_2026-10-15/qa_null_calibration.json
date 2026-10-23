@@ -1,0 +1,8 @@
+{
+  "e_process_null_cells": 450,
+  "maximum_e_process_rejection": 0.048599999999999997,
+  "maximum_e_process_standardized_excess": -0.45421997916613682,
+  "e_process_bonferroni_flags": [],
+  "terminal_asymptotic_range": [0.044600000000000001, 0.055599999999999997],
+  "interpretation": "Individual estimates may exceed 0.05 through Monte Carlo variation. Bonferroni upper-tail flags identify cells for scientific review; asymptotic terminal comparators are reported separately. These diagnostics do not alter saved results."
+}

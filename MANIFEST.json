@@ -1,0 +1,390 @@
+{
+  "repository": "https://github.com/hiendn/Anytime_Valid_Survival_Tests",
+  "data_source": "public msm 1.8.2 example objects",
+  "files": {
+    ".gitignore": {
+      "sha256": "9d6de6a522b59147a5032c8bc4e7fae694fba64b82980ec366341217ce5abb5a",
+      "bytes": 190
+    },
+    "Clinical_Figures.R": {
+      "sha256": "d4ef03685a063fef3cbd609fd962b50776f8dc19ebf9b925516788dc6bf93dfc",
+      "bytes": 1238
+    },
+    "Export_Data.R": {
+      "sha256": "182cc2de40ff0d5a5ac00f75e4e2a1868fa50fa9d20ca2b6d1aa551191949d5e",
+      "bytes": 653
+    },
+    "README.md": {
+      "sha256": "0004e3c2e752b0c1dfec254817f99aef840b73c00227210be9db8a3be4294c26",
+      "bytes": 4469
+    },
+    "Reproduce_Figures.R": {
+      "sha256": "eb576e1e16c1d3d04885af33a1830b933f1dfff7cf50d73a70148053d46680ec",
+      "bytes": 360
+    },
+    "Verify_Results.py": {
+      "sha256": "405d967d09b4a997bf8d175b68c38e4088b18ae568d86b5043a327174e6c6cc3",
+      "bytes": 6593
+    },
+    "data/GPL-2": {
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "bytes": 18092
+    },
+    "data/README.md": {
+      "sha256": "56bd3e72ed3d43edb05394ef35a40585a9493677ea092c6bab73acb882834e6a",
+      "bytes": 1000
+    },
+    "data/cav.csv": {
+      "sha256": "251143bb9d7e0a9a495f68951de5ce1317d2b54c463425ff8bcb6125ee9b00a0",
+      "bytes": 159660
+    },
+    "data/psor.csv": {
+      "sha256": "9ac6803ded9dce3e372ea102f483307169b2206436a94dc09f772e8dfa5f9b09",
+      "bytes": 13651
+    },
+    "figures/referee_cav_evidence.pdf": {
+      "sha256": "081be30d49c2d06fb7d2e7c4b5f0330651512b703b4035f3223c61ec4c85da28",
+      "bytes": 6200
+    },
+    "figures/referee_psa_evidence.pdf": {
+      "sha256": "77d0da05383c0dbb05c1dd1df0d97f211844f349ec14f642eeeeedd1bba64219",
+      "bytes": 6042
+    },
+    "figures/referee_sim_assessment_frequency.pdf": {
+      "sha256": "2417e9ed75db162bad6703600112fcd5e281a80ea9792c9e8f86cf2bcf1b063a",
+      "bytes": 6460
+    },
+    "figures/referee_sim_sample_size.pdf": {
+      "sha256": "b2e28776e70575d5a06358af280c4dcbc7a8fc6c1977db5a8233be6d31cf83be",
+      "bytes": 10605
+    },
+    "main.tex": {
+      "sha256": "0a0a3eb77650be1c4c3994e655ee631e02c3024d47716b61da94f25e80ac2ed1",
+      "bytes": 192498
+    },
+    "manuscript.pdf": {
+      "sha256": "75fd9adbb44584566148ce98b7127981ee63cf8becabcd52e3bcfe7d1a630bc5",
+      "bytes": 587414
+    },
+    "reference/liming_revision/data/application_fixed_margin_updates.csv": {
+      "sha256": "934655b9592a3692c3f1d9a7aaed63828c65296c92c4ac86f570ee4333b9d8f7",
+      "bytes": 339532
+    },
+    "reference/liming_revision/data/application_weight_eprocess_paths.csv": {
+      "sha256": "f15f4b2d28b8969ce443d2187b5fa36611d50abd7f2bfac581c2955c31fd75af",
+      "bytes": 188056
+    },
+    "reference/liming_revision/data/application_weight_summary.csv": {
+      "sha256": "f7003fe523595c3a3cf0a5199dca374d2730f5074aa8edc9b4503f44af60c989",
+      "bytes": 5433
+    },
+    "results/session/referee_2026-10-22/clinical/coefficient_weight_ranges.csv": {
+      "sha256": "c8587d1f56b8fe2a5997674aaf4fa4865a61c6fbd9f5cfc29e5327f87caeb946",
+      "bytes": 3598
+    },
+    "results/session/referee_2026-10-22/clinical/comparison_counts.csv": {
+      "sha256": "1b55f2ec087ade1e08fe44eb9f0b39943da7f71aa7e84d4254ef4f8d69bff2d1",
+      "bytes": 415
+    },
+    "results/session/referee_2026-10-22/clinical/conditional_variances.csv": {
+      "sha256": "326c573601352aa38c4c89ed96ad816476710e729e814579a3d9a53769c2f6f0",
+      "bytes": 22733
+    },
+    "results/session/referee_2026-10-22/clinical/independent_path_checks.csv": {
+      "sha256": "2b5126e5141305779e74b08f24ccaaf6d43aff8ad1bb63466297a67c0ac9eb8e",
+      "bytes": 62445
+    },
+    "results/session/referee_2026-10-22/clinical/psa_reference_table_contributions.csv": {
+      "sha256": "f48e7fb40f43997e59e380f65460b6bf965fbc8d5106b803934390a6737e72b1",
+      "bytes": 5938
+    },
+    "results/session/referee_2026-10-22/clinical/stress/design_and_validation.json": {
+      "sha256": "e6d619fbba0bc1f466e6740f07b4d24a72a2344389feb30e62c58fdb44d127cf",
+      "bytes": 2459
+    },
+    "results/session/referee_2026-10-22/clinical/stress/replicate_results.csv": {
+      "sha256": "b19901ab24d6ea8d9a5807b6724cbb3738a781099fd2a8dbd47fd029dfe85cae",
+      "bytes": 2403469
+    },
+    "results/session/referee_2026-10-22/clinical/stress/seed_ledger.csv": {
+      "sha256": "cea70df8812a90baaa2aab89ad021397636961221909a6ce9a8d3a4daf5e483f",
+      "bytes": 73813
+    },
+    "results/session/referee_2026-10-22/clinical/stress/summary.csv": {
+      "sha256": "1754be8bfb8c9e7c29563ea00080bb501cbc03b76bcc3977e49b8b2c028557e3",
+      "bytes": 1808
+    },
+    "results/session/todo_production_2026-10-15/completion.json": {
+      "sha256": "6dba349fc546e7da53efc6818fc049b3fd851e02bf528cf5dd1b06a7218cd678",
+      "bytes": 289
+    },
+    "results/session/todo_production_2026-10-15/design.json": {
+      "sha256": "1454e2e6eda67fb66558e7667ee81ae1b97b91d64d16b7bb25eafce6ea684cf3",
+      "bytes": 2977
+    },
+    "results/session/todo_production_2026-10-15/design_full_precision.json": {
+      "sha256": "4e2b1904d06ec4a799e8d2d73d71a2ac0be711c9a12b153e1d90141a455af0e5",
+      "bytes": 4493
+    },
+    "results/session/todo_production_2026-10-15/frozen_scales.csv": {
+      "sha256": "309a9a934a3190f37f7f69c33bb3131eb9a0794527bf25083e15313371bde5ca",
+      "bytes": 546
+    },
+    "results/session/todo_production_2026-10-15/frozen_scales.rds": {
+      "sha256": "8cb55ced5232091e08216220aefe8cc9d95dd171c4730d6c69f761809f66630c",
+      "bytes": 199
+    },
+    "results/session/todo_production_2026-10-15/paired_differences.csv": {
+      "sha256": "8df51beb877586a177c692983111cd62413f5e3cda979c575524a5480b84674d",
+      "bytes": 524456
+    },
+    "results/session/todo_production_2026-10-15/qa_null_calibration.csv": {
+      "sha256": "47c5caf788562bf4ef998e1729455a023388a3d7a1bb47e24c5beb1511fb078d",
+      "bytes": 125744
+    },
+    "results/session/todo_production_2026-10-15/qa_null_calibration.json": {
+      "sha256": "ebc7dd9046da39a711d4a0465cc5d4bcdada813ac3e99414cd10450c49290253",
+      "bytes": 527
+    },
+    "results/session/todo_production_2026-10-15/seed_ledger.csv": {
+      "sha256": "42ba5da7b5489ed75833629244c50d3d7b620f7e7084ecfe58a93b578b2e1766",
+      "bytes": 28078
+    },
+    "results/session/todo_production_2026-10-15/session-info.txt": {
+      "sha256": "b5e6b4ddbea283e4e88c4f64d97756538bcb7f78bd5ea4d176776e5127c86f41",
+      "bytes": 726
+    },
+    "results/session/todo_production_2026-10-15/sim1_score_equivalence.csv": {
+      "sha256": "a8fa8f787ec5469d619989537a95d2d6377ab648b905d7905f7d2d2a0155c5db",
+      "bytes": 2213
+    },
+    "results/session/todo_production_2026-10-15/summary.csv": {
+      "sha256": "64110e46cef2422d1935c09921069eb7c839fb2ae7f3cfb77e7fcbc5f3b59ea1",
+      "bytes": 199919
+    },
+    "scripts/referee_clinical_diagnostics.R": {
+      "sha256": "a18ebfc1e8c314d0de0d207b4746b4db88b508f0772b33a5b8d79c87199ceb4a",
+      "bytes": 7164
+    },
+    "scripts/referee_clinical_stress.R": {
+      "sha256": "86b2f2504d4222ca4299972f661dd83e320e2ce80d83b22fb373d3682f6e00b7",
+      "bytes": 9208
+    },
+    "scripts/referee_sim_figures.R": {
+      "sha256": "735104bcfa4161766b67cfba19965c572ea3becdc0b0f4bd592e9732c0eab18d",
+      "bytes": 4783
+    },
+    "scripts/report_remaining_simulations.R": {
+      "sha256": "e1f99940d19479ffe2b08d3dd82284c984670eff3c80f67ae8e269890c9e930b",
+      "bytes": 14747
+    },
+    "scripts/run_remaining_simulations.R": {
+      "sha256": "0d134f4a5aa6990f7fac1fcecdd0baa0a1a2b4f20ae4ced0c744ab37858e4530",
+      "bytes": 17458
+    },
+    "scripts/sim1_benchmark.R": {
+      "sha256": "1c77ddcb2f49d5446329c877bdbd59f30996f3c5c7b216be63d5c84e921c1168",
+      "bytes": 10085
+    },
+    "scripts/sim2_comparators.R": {
+      "sha256": "1503c3eee57b47a0f9cd6683af383892323e29be5509749d8e68e14c3878edbc",
+      "bytes": 5139
+    },
+    "scripts/sim2_kernels.cpp": {
+      "sha256": "1cf17410945c5795365716033b35a77e32360ced02d5ae13f6498b90b7037cd4",
+      "bytes": 8234
+    },
+    "simulations/code/mixed_resolution_figures.R": {
+      "sha256": "3f9e6f3e6765b3a601c97fc7e33f973044380dc147ec794cfa0247f6f2928149",
+      "bytes": 4805
+    },
+    "simulations/code/run_covariate_study.R": {
+      "sha256": "992052d0447369ff2b86da00154393abf494ffbfd2e1ef8702112afa594839ea",
+      "bytes": 37949
+    },
+    "simulations/code/run_exact_interval_primary.R": {
+      "sha256": "80d52272db576489e62e197d524171109f0c5c5bcb024cae6d90b768541e4d49",
+      "bytes": 21826
+    },
+    "simulations/code/run_practical_battery.R": {
+      "sha256": "9c35cf4b7ec9d1fe3817bc214b0b1148b82ad5bd42a9c10f538c027ef0d088e8",
+      "bytes": 51388
+    },
+    "simulations/code/run_real_data_applications.R": {
+      "sha256": "87f05cb2b02baeb1bc87abc172068289dc68091499d62a2cfdb5ca640338c606",
+      "bytes": 35162
+    },
+    "simulations/code/simulation_config.R": {
+      "sha256": "927137824ae2a2eec7fdad931995d378a04113a69007131dab4de27a42d41328",
+      "bytes": 471
+    },
+    "simulations/code/simulation_core.R": {
+      "sha256": "db1336974759acefa7d8f30dccf3492952c318d698e36e8601ebed66f51e2ea6",
+      "bytes": 28320
+    },
+    "simulations/code/simulation_kernels.cpp": {
+      "sha256": "4c8e7440929c2425a79c119448be6d836d5c4a869d361a8dfed925de065bd423",
+      "bytes": 8998
+    },
+    "simulations/code/validate_mixed_results.R": {
+      "sha256": "68a9785d1b1380d04e0b8f474b98dde3b610eff4e8473ad8dd5a136e525ea32a",
+      "bytes": 7216
+    },
+    "simulations/results/application_eprocess_paths.csv": {
+      "sha256": "4a3a98f8f52a375b48f636621a79b25f22215750da92e45a7a34c25c7b31fee1",
+      "bytes": 30781
+    },
+    "simulations/results/application_fixed_margin_updates.csv": {
+      "sha256": "934655b9592a3692c3f1d9a7aaed63828c65296c92c4ac86f570ee4333b9d8f7",
+      "bytes": 339532
+    },
+    "simulations/results/application_summary.csv": {
+      "sha256": "b8cb91969d121a688a750b4818c604c6c8b3eb159b3374e7d68b81c15a3b3e1b",
+      "bytes": 2473
+    },
+    "simulations/results/application_validation.json": {
+      "sha256": "03178daae1bd1a629332a8605bf5033f3c119820c882270bf9e96a6f68be5aa7",
+      "bytes": 4841
+    },
+    "simulations/results/application_weight_eprocess_paths.csv": {
+      "sha256": "f15f4b2d28b8969ce443d2187b5fa36611d50abd7f2bfac581c2955c31fd75af",
+      "bytes": 188056
+    },
+    "simulations/results/application_weight_summary.csv": {
+      "sha256": "f7003fe523595c3a3cf0a5199dca374d2730f5074aa8edc9b4503f44af60c989",
+      "bytes": 5433
+    },
+    "simulations/results/baseline_eta_calibration.csv": {
+      "sha256": "2c8332d0930424ebfb2d6ea864b97d25a4e9dd0502ab4fb1095274e7138cb815",
+      "bytes": 10304
+    },
+    "simulations/results/covariate_characteristics.csv": {
+      "sha256": "f39708dc82f24660cdc04aadb1ac87857c40fcdecd0e7b9d4c8f46a584b7f453",
+      "bytes": 1630
+    },
+    "simulations/results/covariate_designs.json": {
+      "sha256": "74c85bf4520c5de9b25b911a6a99d55cf90cc65344faaf650e3a7bae1f5d50ff",
+      "bytes": 4709
+    },
+    "simulations/results/covariate_eta_calibration.csv": {
+      "sha256": "3a5b812b1820d1cc7e84ddfc497437d4b06bebc7024661ddec304f98f17ea2fd",
+      "bytes": 34522
+    },
+    "simulations/results/covariate_stratification.csv": {
+      "sha256": "b86b8cc8a74bea2211bca926dfd16b440807ada07949f8f17a30fb706aff092f",
+      "bytes": 11695
+    },
+    "simulations/results/covariate_validation.json": {
+      "sha256": "1793b2d71176248d1d273c9c4bb2678805e9b3a1d027f4f333cf7e5dd3bf1a8e",
+      "bytes": 13821
+    },
+    "simulations/results/design_sensitivity.csv": {
+      "sha256": "2ddd40dec470097435877d93e9030d832b30cbdfe2cc0bf3d5a1a48e216e1597",
+      "bytes": 66888
+    },
+    "simulations/results/effect_tilt_eta_calibration.csv": {
+      "sha256": "3fb193f62961bd4f3f3f6bbe724e0c565fa8d4cfbc474a38ba9ba40a4d9f9901",
+      "bytes": 232040
+    },
+    "simulations/results/effect_tilt_sensitivity.csv": {
+      "sha256": "3f30cc6ecf771077421a8414f331ebb72e8c859e792c4b54869f3679fbc73d5f",
+      "bytes": 20416
+    },
+    "simulations/results/eta_calibration.csv": {
+      "sha256": "e19566b6d11419b0969f5c4edabddaf4c7d8b3b1c24053ab4a817d9fbfb5a683",
+      "bytes": 318304
+    },
+    "simulations/results/expanded_primary.csv": {
+      "sha256": "283d18dd5bed9c5e555ee866af8002a30ba4d2d156bf764004c9f7bc7af45169",
+      "bytes": 33063
+    },
+    "simulations/results/expanded_primary_eta_calibration.csv": {
+      "sha256": "cc2b79ead566c89b05762f1d90f6ea69f852a90642a251d2890128c62cac032f",
+      "bytes": 83355
+    },
+    "simulations/results/expanded_validation.json": {
+      "sha256": "cbf8f5fdb37437ede80995b36541e002fc5f6187fdbe18af54e3822a8fa44660",
+      "bytes": 5031
+    },
+    "simulations/results/mixed_resolution_eta_calibration.csv": {
+      "sha256": "d7e76536ffc92d99732f3102f66352b1362e8ad28c87bfc3dc2818742cc42e66",
+      "bytes": 357473
+    },
+    "simulations/results/mixed_resolution_example_paths.rds": {
+      "sha256": "cfdf1d85a2a81b3ad38fd236e5b182624b7dbcaecbfb9f82c5a710761f32225c",
+      "bytes": 94696
+    },
+    "simulations/results/mixed_resolution_observation_mix.csv": {
+      "sha256": "629221a10e19fc39ea6f608d55946dd7f3cf1c03e2f7b856fb8575704c8716cd",
+      "bytes": 6779
+    },
+    "simulations/results/mixed_resolution_paired_differences.csv": {
+      "sha256": "8ed7b3a2232c9efe7eeb0cd6952001f0a0c579fdfba692047ba3cb3a59a9086f",
+      "bytes": 16005
+    },
+    "simulations/results/mixed_resolution_summary.csv": {
+      "sha256": "5c6bf5d30f2d7f6323a779290c7844ed812ff72171fc580c26c04819d1f6c139",
+      "bytes": 192085
+    },
+    "simulations/results/mixed_resolution_validation.json": {
+      "sha256": "c9407ad84707d9a6da0850b75317b932fcd4d8c4d3d56351720fd52fbcbc1732",
+      "bytes": 9188
+    },
+    "simulations/results/paired_power_differences.csv": {
+      "sha256": "39c413dfc149baa1bc176b070807212ab4aae0c23227fa20aad68f479427aeb0",
+      "bytes": 9915
+    },
+    "simulations/results/paired_power_differences_full.csv": {
+      "sha256": "39c413dfc149baa1bc176b070807212ab4aae0c23227fa20aad68f479427aeb0",
+      "bytes": 9915
+    },
+    "simulations/results/panel_designs.json": {
+      "sha256": "f4013824d0ae1da41c6403b094d0d01c372a0b977e1f53bb8b158dc7e048a4fe",
+      "bytes": 53746
+    },
+    "simulations/results/practical_completion.json": {
+      "sha256": "2922d22c26b500aa8ee6cfb21d06d39be7b51a014c60a3079f672cbc3233a910",
+      "bytes": 2726
+    },
+    "simulations/results/scenario_characteristics.csv": {
+      "sha256": "f5a252ec193cb9348f5057e2449c7537bb91829019b46c234add847f623b70ed",
+      "bytes": 5023
+    },
+    "simulations/results/simulation_summary.csv": {
+      "sha256": "d7c35022714276506cd342baab78880570db11e18abc38a703abf087f36d0e75",
+      "bytes": 167567
+    },
+    "simulations/results/two_scheme_weight_battery.csv": {
+      "sha256": "bee8e71fac04ca1d54a2085afcdf975271ca13c562c7e6b15265967cd656ecca",
+      "bytes": 96315
+    },
+    "simulations/results/two_scheme_weight_eta_calibration.csv": {
+      "sha256": "b6593cc97ffdf465665652da57ffe505a4121d0939b383432ae3fabff3c1df4d",
+      "bytes": 1179502
+    },
+    "simulations/results/validation.json": {
+      "sha256": "6a5dc0d2226640c32ad4f806ce2eae69b14615b1a878c17c3fea61dbbd824510",
+      "bytes": 21683
+    },
+    "simulations/results/visit_frequency.csv": {
+      "sha256": "85046d932ad3bcc9fd6b3c00c40479e5d49dc38776cde0d433670fde9b8ad964",
+      "bytes": 25116
+    },
+    "simulations/results/weight_battery.csv": {
+      "sha256": "e83cc4fe6adf5397ef8d5bbf786b4e23a6cdaaddfcf85ad1513b54797548c2b6",
+      "bytes": 23928
+    },
+    "simulations/results/weight_battery_null.csv": {
+      "sha256": "dee776b69f523d1e400f6b9d219844099df708c60378b0909bf85b99f77a4439",
+      "bytes": 24308
+    },
+    "tests/session/test-sim1.R": {
+      "sha256": "ab3fdb5631597f2eca621f4860f7e81a23d9b7eda1d7cbd5090e5df9f3c26868",
+      "bytes": 6738
+    },
+    "tests/session/test-sim2.R": {
+      "sha256": "13dcdb0c2f91734b7521ba1d04c4bc58d99f68b7ac0ffb1a9144be928de2fbf9",
+      "bytes": 5108
+    }
+  }
+}

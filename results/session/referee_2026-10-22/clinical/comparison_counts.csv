@@ -1,0 +1,7 @@
+analysis,dataset,q,unit,intervals,comparisons,looks,events,informative_comparisons,informative_events,zero_variance_events
+cav_q0.10,cav,0.1,years,1477,521,95,214,67,130,84
+cav_q0.25_primary,cav,0.25,years,1475,329,51,214,70,166,48
+cav_q0.50,cav,0.5,years,1475,257,31,214,63,175,39
+psor_q3,psor,3,months,202,16,7,72,5,51,21
+psor_q6_primary,psor,6,months,193,8,4,72,4,61,11
+psor_q12,psor,12,months,186,4,2,72,3,71,1

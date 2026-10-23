@@ -1,0 +1,92 @@
+[
+  {
+    "scenario": "covariate_stratified",
+    "description": "Hazard ratio 0.65 within binary prognostic strata, with confounding, censoring and delayed entry.",
+    "scale_logrank": 1,
+    "eta_logrank": -0.37081632653061214,
+    "obf_c_logrank": 1.96,
+    "planned_information_logrank": [1.7221968559478984, 3.8008022154126895, 5.7007214468400775, 7.0293978058090349, 7.9613455378155438, 8.6399046363978282, 9.1255330860534727, 9.4768213288985468],
+    "n": 100
+  },
+  {
+    "scenario": "covariate_unadjusted",
+    "description": "Hazard ratio 0.65 within binary prognostic strata, with confounding, censoring and delayed entry.",
+    "scale_logrank": 1,
+    "eta_logrank": -0.69428571428571417,
+    "obf_c_logrank": 1.96,
+    "planned_information_logrank": [2.2688359561523384, 4.9970317918165978, 7.4714431434112463, 9.1879155277388698, 10.38458594428184, 11.256093094790923, 11.881358217683738, 12.33520877200308],
+    "n": 100
+  },
+  {
+    "scenario": "covariate_stratified",
+    "description": "Hazard ratio 0.65 within binary prognostic strata, with confounding, censoring and delayed entry.",
+    "scale_logrank": 1,
+    "eta_logrank": -0.37081632653061214,
+    "obf_c_logrank": 1.96,
+    "planned_information_logrank": [3.4652075978939902, 7.6611185988673185, 11.519895953810458, 14.258275206717578, 16.222329172175499, 17.649459094282051, 18.698722298682235, 19.471062025348999],
+    "n": 200
+  },
+  {
+    "scenario": "covariate_unadjusted",
+    "description": "Hazard ratio 0.65 within binary prognostic strata, with confounding, censoring and delayed entry.",
+    "scale_logrank": 1,
+    "eta_logrank": -0.69428571428571417,
+    "obf_c_logrank": 1.96,
+    "planned_information_logrank": [4.5468231292749035, 9.9907789167745271, 14.940293685660732, 18.40626274006544, 20.85755459282128, 22.624042213219845, 23.917518333937458, 24.875487714713874],
+    "n": 200
+  },
+  {
+    "scenario": "covariate_stratified",
+    "description": "Hazard ratio 0.65 within binary prognostic strata, with confounding, censoring and delayed entry.",
+    "scale_logrank": 1,
+    "eta_logrank": -0.37081632653061214,
+    "obf_c_logrank": 1.96,
+    "planned_information_logrank": [8.7800383121163943, 19.527684761522096, 29.254092677805755, 36.122766432627635, 41.094327160862044, 44.693543484833782, 47.395370267486612, 49.378694168239001],
+    "n": 500
+  },
+  {
+    "scenario": "covariate_unadjusted",
+    "description": "Hazard ratio 0.65 within binary prognostic strata, with confounding, censoring and delayed entry.",
+    "scale_logrank": 1,
+    "eta_logrank": -0.69428571428571417,
+    "obf_c_logrank": 1.96,
+    "planned_information_logrank": [11.405735872565563, 25.259470635953157, 37.671736384931734, 46.320493810943226, 52.494193545216007, 56.923738578206688, 60.235691445992252, 62.666814709716817],
+    "n": 500
+  },
+  {
+    "scenario": "covariate_stratified",
+    "description": "Hazard ratio 0.65 within binary prognostic strata, with confounding, censoring and delayed entry.",
+    "scale_logrank": 1,
+    "eta_logrank": -0.37081632653061214,
+    "obf_c_logrank": 1.96,
+    "planned_information_logrank": [17.517382280893433, 38.952238281475928, 58.523956322464159, 72.356581747217035, 82.269453846167707, 89.582047020655182, 94.966298221786914, 98.996786777449131],
+    "n": 1000
+  },
+  {
+    "scenario": "covariate_unadjusted",
+    "description": "Hazard ratio 0.65 within binary prognostic strata, with confounding, censoring and delayed entry.",
+    "scale_logrank": 1,
+    "eta_logrank": -0.69428571428571417,
+    "obf_c_logrank": 1.96,
+    "planned_information_logrank": [22.836796433481155, 50.520342379958343, 75.530085537773459, 92.920782472933482, 105.18100844543949, 114.1141786734491, 120.65709223121758, 125.5542178042742],
+    "n": 1000
+  },
+  {
+    "scenario": "covariate_stratified",
+    "description": "Hazard ratio 0.65 within binary prognostic strata, with confounding, censoring and delayed entry.",
+    "scale_logrank": 1,
+    "eta_logrank": -0.37081632653061214,
+    "obf_c_logrank": 1.96,
+    "planned_information_logrank": [35.271446529409751, 78.1851908467859, 117.13930150928798, 144.78047328602852, 164.76060288208117, 179.32885792021429, 190.10933553562765, 198.17721855914473],
+    "n": 2000
+  },
+  {
+    "scenario": "covariate_unadjusted",
+    "description": "Hazard ratio 0.65 within binary prognostic strata, with confounding, censoring and delayed entry.",
+    "scale_logrank": 1,
+    "eta_logrank": -0.69428571428571417,
+    "obf_c_logrank": 1.96,
+    "planned_information_logrank": [45.800177097891179, 101.21039531056061, 150.96294688586798, 185.72276701123317, 210.46231755253305, 228.27134808601522, 241.36824549402576, 251.15702905719959],
+    "n": 2000
+  }
+]

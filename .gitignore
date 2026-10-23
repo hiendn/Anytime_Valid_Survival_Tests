@@ -1,0 +1,16 @@
+.DS_Store
+.Rhistory
+.RData
+.local/
+build/
+*.aux
+*.log
+*.out
+*.brf
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+__pycache__/
+simulations/results_new/
+results/session/new_fixed_run/
+results/clinical_new/
